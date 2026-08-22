@@ -309,7 +309,7 @@ ul {
   color: var(--primary-gold);
 }
 
-/* MAIN NAVBAR - TYPOGRAPHIC BRANDING (NO IMAGE LOGO) */
+/* MAIN NAVBAR - PROMINENT TRANSPARENT LOGO */
 .main-header {
   position: sticky;
   top: 0;
@@ -325,58 +325,26 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 84px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
-/* PURE CSS BRAND TEXT LOGO */
-.brand-text-logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
+.brand-logo {
+  height: 56px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 10px rgba(255, 200, 0, 0.35));
+  transition: var(--transition);
 }
 
-.brand-main-text {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2rem;
-  letter-spacing: -0.02em;
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
-
-.brand-bolt-icon {
-  color: var(--primary-gold);
-  font-size: 2.2rem;
-  font-style: normal;
-  text-shadow: 0 0 12px rgba(255, 200, 0, 0.5);
-}
-
-.brand-title-gold {
-  color: var(--primary-gold);
-  text-shadow: 0 2px 10px rgba(255, 200, 0, 0.3);
-}
-
-.brand-title-white {
-  color: var(--white);
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
-}
-
-.brand-sub-text {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 0.675rem;
-  letter-spacing: 0.12em;
-  color: var(--primary-gold);
-  text-transform: uppercase;
-  margin-top: 0.2rem;
+.brand-logo:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 18px rgba(255, 200, 0, 0.6));
 }
 
 .nav-list {
@@ -1448,6 +1416,12 @@ ul {
   margin-bottom: 3rem;
 }
 
+.footer-logo {
+  height: 48px;
+  width: auto;
+  margin-bottom: 1.25rem;
+}
+
 .footer-brand p {
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -1672,6 +1646,9 @@ dialog::backdrop {
   }
   .navbar-container {
     height: 76px;
+  }
+  .brand-logo {
+    height: 48px;
   }
   .nav-menu {
     position: fixed;
