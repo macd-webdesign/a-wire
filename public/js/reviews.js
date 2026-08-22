@@ -1,9 +1,9 @@
-// Authentic Google Reviews Dataset for A-Wire Electrical Contracting Inc.
+// Authentic Google Reviews Dataset for A-Wire Electrical Contracting Inc. (First Name & Last Initial for Privacy)
 
 const realGoogleReviews = [
   {
     id: 1,
-    author: 'Steve MacDougall',
+    author: 'Steve M.',
     reviewsCount: '7 reviews',
     date: 'Recent',
     rating: 5,
@@ -15,7 +15,7 @@ const realGoogleReviews = [
   },
   {
     id: 2,
-    author: 'Ingrid Granton',
+    author: 'Ingrid G.',
     reviewsCount: '5 reviews',
     date: '5 months ago',
     rating: 5,
@@ -27,7 +27,7 @@ const realGoogleReviews = [
   },
   {
     id: 3,
-    author: 'Sahan Taraka',
+    author: 'Sahan T.',
     reviewsCount: 'Local Guide · 35 reviews · 29 photos',
     date: '8 months ago',
     rating: 5,
@@ -39,7 +39,7 @@ const realGoogleReviews = [
   },
   {
     id: 4,
-    author: 'Dave D',
+    author: 'Dave D.',
     reviewsCount: 'Local Guide · 32 reviews · 12 photos',
     date: 'Edited 3 weeks ago',
     rating: 5,
