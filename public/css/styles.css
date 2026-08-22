@@ -309,7 +309,7 @@ ul {
   color: var(--primary-gold);
 }
 
-/* MAIN NAVBAR - ENHANCED & PROMINENT LOGO */
+/* MAIN NAVBAR - TYPOGRAPHIC BRANDING (NO IMAGE LOGO) */
 .main-header {
   position: sticky;
   top: 0;
@@ -325,28 +325,58 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 88px; /* Increased header height for prominent logo */
+  height: 80px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  padding: 0.25rem 0;
+  text-decoration: none;
 }
 
-/* PROMINENT LOGO STYLING */
-.brand-logo {
-  height: 64px; /* Significantly larger & bold logo presentation */
-  max-width: 240px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(255, 200, 0, 0.25));
-  transition: var(--transition);
+/* PURE CSS BRAND TEXT LOGO */
+.brand-text-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 
-.brand-logo:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 4px 15px rgba(255, 200, 0, 0.45));
+.brand-main-text {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.brand-bolt-icon {
+  color: var(--primary-gold);
+  font-size: 2.2rem;
+  font-style: normal;
+  text-shadow: 0 0 12px rgba(255, 200, 0, 0.5);
+}
+
+.brand-title-gold {
+  color: var(--primary-gold);
+  text-shadow: 0 2px 10px rgba(255, 200, 0, 0.3);
+}
+
+.brand-title-white {
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.brand-sub-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.675rem;
+  letter-spacing: 0.12em;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  margin-top: 0.2rem;
 }
 
 .nav-list {
@@ -486,136 +516,29 @@ ul {
   color: var(--text-muted);
 }
 
-/* INTERACTIVE CSS HERO CARD (REPLACING FLYERCARD.PNG IMAGE WITH FULL CONTENT) */
-.hero-card-component {
-  background: linear-gradient(145deg, #18181D 0%, #0A0A0C 100%);
-  border: 2px solid var(--primary-gold);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem 2rem;
-  box-shadow: var(--shadow-lg);
+.hero-visual {
   position: relative;
-  text-align: center;
+}
+
+.flyer-card-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--border-gold);
+  box-shadow: var(--shadow-lg);
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
   transition: var(--transition);
 }
 
-.hero-card-component:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-glow);
+.flyer-card-wrapper:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  box-shadow: 0 20px 40px rgba(255, 200, 0, 0.2);
 }
 
-.hero-card-logo-wrap {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.hero-card-logo {
-  height: 72px; /* High impact prominent logo on card */
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(255, 200, 0, 0.4));
-}
-
-.hero-card-services-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.6rem 1rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--white);
-  letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
-}
-
-.hero-card-services-bar .divider {
-  color: var(--primary-gold);
-}
-
-.hero-card-emergency-box {
-  background: linear-gradient(135deg, rgba(255, 200, 0, 0.15) 0%, rgba(245, 158, 11, 0.1) 100%);
-  border: 1px solid var(--primary-gold);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-card-emergency-box .badge-24h {
-  display: inline-block;
-  background-color: var(--primary-gold);
-  color: var(--text-dark);
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.4rem;
-  padding: 0.2rem 1rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.hero-card-emergency-box p {
-  color: var(--text-main);
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.hero-card-phone-wrap {
-  margin-bottom: 1.25rem;
-}
-
-.hero-card-phone {
+.hero-card-img {
+  width: 100%;
+  height: auto;
   display: block;
-  font-family: var(--font-heading);
-  font-size: 2.25rem;
-  font-weight: 900;
-  color: var(--primary-gold);
-  text-shadow: 0 0 15px rgba(255, 200, 0, 0.3);
-  letter-spacing: 0.02em;
-}
-
-.hero-card-phone:hover {
-  color: var(--white);
-  transform: scale(1.03);
-}
-
-.hero-card-esa {
-  display: inline-block;
-  background-color: var(--dark-card);
-  border: 1px solid var(--border-color);
-  color: var(--white);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1rem;
-  padding: 0.4rem 1.25rem;
-  border-radius: 50px;
-  margin-bottom: 1.5rem;
-}
-
-.hero-card-esa span {
-  color: var(--primary-gold);
-}
-
-.hero-card-pillars {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.85rem;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--text-muted);
-  letter-spacing: 0.06em;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.hero-card-pillars span {
-  color: var(--primary-gold);
 }
 
 /* 24/7 EMERGENCY BANNER */
@@ -675,10 +598,7 @@ ul {
   margin: 0;
 }
 
-/* ==========================================================================
-   EXACT GOOGLE REVIEWS LANDING PAGE CAROUSEL (MATCHING SCREENSHOT)
-   ========================================================================== */
-
+/* GOOGLE REVIEWS LANDING PAGE CAROUSEL */
 .reviews-section-landing {
   position: relative;
   padding: 6rem 0 5rem;
@@ -779,7 +699,7 @@ ul {
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* WHITE REVIEW CARDS matching screenshot */
+/* WHITE REVIEW CARDS */
 .white-review-card {
   flex: 0 0 calc(33.333% - 1.17rem);
   background-color: #FFFFFF;
@@ -1172,7 +1092,7 @@ ul {
 
 /* QUOTE SECTION & FORM */
 .quote-wrapper {
-  display grid;
+  display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 3rem;
   align-items: start;
@@ -1528,12 +1448,6 @@ ul {
   margin-bottom: 3rem;
 }
 
-.footer-logo {
-  height: 48px;
-  width: auto;
-  margin-bottom: 1.25rem;
-}
-
 .footer-brand p {
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -1758,9 +1672,6 @@ dialog::backdrop {
   }
   .navbar-container {
     height: 76px;
-  }
-  .brand-logo {
-    height: 48px;
   }
   .nav-menu {
     position: fixed;
