@@ -28,11 +28,11 @@
     </div>
   </aside>
 
-  <!-- Main Navigation Header -->
+  <!-- Main Navigation Header with Prominent Logo -->
   <header class="main-header" id="navbar">
     <div class="container navbar-container">
       <a href="/index.html" class="logo-link">
-        <img src="/assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="brand-logo" width="180" height="56" fetchpriority="high">
+        <img src="/assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="brand-logo" width="240" height="64" fetchpriority="high">
       </a>
 
       <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
@@ -114,14 +114,34 @@
           </div>
         </div>
 
+        <!-- REPLACED FLYERCARD.PNG WITH INTERACTIVE HERO CARD COMPONENT -->
         <div class="hero-visual">
-          <div class="flyer-card-wrapper">
-            <img src="/assets/flyer_card.png" alt="A-Wire 24 Hour Electrical Service Card" class="hero-card-img" width="500" height="380">
-            <div class="hero-badge-overlay">
-              <div class="overlay-badge">
-                <span class="badge-num">24/7</span>
-                <span class="badge-lbl">Day & Night Service</span>
-              </div>
+          <div class="hero-card-component">
+            <div class="hero-card-logo-wrap">
+              <img src="/assets/logo.png" alt="A-Wire Electrical Logo" class="hero-card-logo" width="220" height="72">
+            </div>
+
+            <div class="hero-card-services-bar">
+              <span>RESIDENTIAL</span>
+              <span class="divider">|</span>
+              <span>COMMERCIAL</span>
+            </div>
+
+            <div class="hero-card-emergency-box">
+              <span class="badge-24h">24 HOUR SERVICE</span>
+              <p>24/7 – Day or Night, We're Here When You Need Us.</p>
+            </div>
+
+            <div class="hero-card-phone-wrap">
+              <a href="tel:9059555455" class="hero-card-phone">📞 905 955-5455</a>
+            </div>
+
+            <div class="hero-card-esa">
+              ECRA / ESA # <span>7016330</span>
+            </div>
+
+            <div class="hero-card-pillars">
+              <span>LICENSED</span> • <span>INSURED</span> • <span>RELIABLE</span> • <span>PROFESSIONAL</span>
             </div>
           </div>
         </div>
@@ -149,35 +169,32 @@
       </div>
     </section>
 
-    <!-- LANDING PAGE GOOGLE REVIEWS CAROUSEL (MATCHING SCREENSHOT) -->
+    <!-- LANDING PAGE REAL GOOGLE REVIEWS CAROUSEL -->
     <section id="reviews" class="reviews-section-landing">
       <div class="reviews-watermark">REVIEWS</div>
 
       <div class="container">
-        <!-- Google Badge Header -->
         <div class="reviews-header-badge">
           <div class="google-badge-pill">
             <span class="google-g-circle">G</span>
             <span class="google-score-num">5.0</span>
           </div>
-          <div class="google-biz-name">A-Wire Electrical</div>
+          <div class="google-biz-name">A-Wire Electrical Contracting</div>
           <div class="google-stars-gold">★★★★★</div>
-          <div class="google-reviews-count">156 Reviews</div>
+          <div class="google-reviews-count">Verified Google Client Reviews</div>
         </div>
 
-        <!-- Carousel Container -->
         <div class="carousel-container">
           <button type="button" class="carousel-btn carousel-btn-prev" id="carousel-prev" aria-label="Previous Review">&lt;</button>
 
           <div class="carousel-track-window">
             <div class="carousel-track" id="carousel-track">
-              <!-- Dynamically rendered white review cards from reviews.js -->
+              <!-- Dynamically rendered real Google reviews from reviews.js -->
             </div>
           </div>
 
           <button type="button" class="carousel-btn carousel-btn-next" id="carousel-next" aria-label="Next Review">&gt;</button>
 
-          <!-- Pagination Dots -->
           <div class="carousel-dots" id="carousel-dots"></div>
         </div>
       </div>
@@ -237,7 +254,7 @@
   <footer class="main-footer">
     <div class="container footer-container">
       <div class="footer-brand">
-        <img src="/assets/logo.png" alt="A-Wire Logo" class="footer-logo" width="160" height="50">
+        <img src="/assets/logo.png" alt="A-Wire Logo" class="footer-logo" width="180" height="50">
         <p>A-Wire Electrical Contracting Inc. is your trusted licensed electrical contractor providing residential and commercial solutions built on safety, precision, and reliability.</p>
         <span class="footer-esa">ECRA / ESA Licence # 7016330</span>
       </div>
