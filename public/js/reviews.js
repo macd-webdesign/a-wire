@@ -1,4 +1,4 @@
-// Real Google Reviews Dataset for A-Wire Electrical Contracting Inc.
+// Authentic Google Reviews Dataset for A-Wire Electrical Contracting Inc.
 
 const realGoogleReviews = [
   {
@@ -8,9 +8,8 @@ const realGoogleReviews = [
     date: 'Recent',
     rating: 5,
     avatarText: 'S',
-    avatarBg: '#0097A7', // Teal circle as in screenshot
+    avatarBg: '#0097A7', // Teal circle
     avatarImg: null,
-    badge: 'Reasonable price',
     snippet: 'A-Wire helped us with a faulty breaker and installed a light fixture. Their work fast very quick and professional. We\'d definitely have them back again...',
     fullText: 'A-Wire helped us with a faulty breaker and installed a light fixture. Their work fast very quick and professional. We\'d definitely have them back again for other projects. Highly recommended.'
   },
@@ -21,11 +20,10 @@ const realGoogleReviews = [
     date: '5 months ago',
     rating: 5,
     avatarText: 'I',
-    avatarBg: '#C2185B', // Magenta/Pink circle as in screenshot
+    avatarBg: '#C2185B', // Magenta/Pink circle
     avatarImg: null,
-    badge: null,
     snippet: 'My first experience with A-Wire Electrical Contracting was very positive. Ashan works in an efficient, professional manner and provided great suggestions...',
-    fullText: 'My first experience with A-Wire Electrical Contracting was very positive. Ashan works in an efficient, professional manner and, when asked, provided me with great suggestions for some of my lighting needs. He was able to convert my previous fluorescent lighting to more energy efficient LED lighting, for six fixtures, at a very reasonable price. I would HIGHLY recommend Ashan and A-Wire Electrical Contracting.'
+    fullText: 'My first experience with A-Wire Electrical Contracting was very positive. Ashan works in an efficient, professional manner and, when asked, provided me with great suggestions for some of my lighting needs. He was able to convert my previous florescent lighting to more energy efficient LED lighting, for six fixtures, at a very reasonable price. I would HIGHLY recommend Ashan and A-Wire Electrical Contracting.'
   },
   {
     id: 3,
@@ -34,9 +32,8 @@ const realGoogleReviews = [
     date: '8 months ago',
     rating: 5,
     avatarText: 'S',
-    avatarBg: '#15803D',
-    avatarImg: null, // Profile with guitar / outdoor
-    badge: 'Potlights & Kitchen Wiring',
+    avatarBg: '#15803D', // Green circle
+    avatarImg: null,
     snippet: 'We had a new kitchen island and a coffee bar wired with electrical outlets. The electrician was very creative and fed the wire through our condo ceiling safely...',
     fullText: 'We had a new kitchen island and a coffee bar wired with electrical outlets. The electrician was very creative and fed the wire through our condo ceiling safely and securely with minimal to almost no mess. I was so thankful we had him for our project because of how precise and clean he was. He also installed potlights in our walk-in closet and did an amazing job. Thank you A-wire!'
   },
@@ -47,11 +44,10 @@ const realGoogleReviews = [
     date: 'Edited 3 weeks ago',
     rating: 5,
     avatarText: 'D',
-    avatarBg: '#854D0E', // Brown circle with local guide star as in screenshot
+    avatarBg: '#854D0E', // Brown circle with local guide badge
     avatarImg: null,
-    badge: 'Positive: Quality, Value',
     snippet: 'Had an old GFI receptacle replaced. Also had a dusk to dawn timer put in for the outdoor lights. Great job 👍 Update added under counter LED strip lights.',
-    fullText: 'Had an old GFI receptacle replaced. Also had a dusk to dawn timer put in for the outdoor lights. Great job 👍 Update added under counter LED strip lights.\n\nServices: Outdoor lighting installation, Electrical outlet & switch relocation'
+    fullText: 'Had an old GFI receptacle replaced. Also had a dusk to dawn timer put in for the outdoor lights. Great job 👍 Update added under counter LED strip lights.\n\nPositive: Quality, Value\nServices: Outdoor lighting installation, Electrical outlet & switch relocation'
   }
 ];
 
