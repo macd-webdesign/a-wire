@@ -216,7 +216,7 @@ function initChatbot() {
 
     // 3. EV Charger & Tesla Intent
     if (q.includes('ev') || q.includes('charger') || q.includes('tesla') || q.includes('level 2') || q.includes('chargepoint') || q.includes('car') || q.includes('electric vehicle')) {
-      return `🔌 <strong>Level 2 EV Charger Installation</strong><br><br>We install dedicated 240V circuits (40A/50A/60A breakers with EMT conduit) for Tesla Wall Connectors, ChargePoint, Wallbox, and all EV models in double/single garages.<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Get EV Charger Estimate &gt;</a>`;
+      return `🔌 <strong>Level 2 EV Charger Installation</strong><br><br>We install dedicated 240V circuits (40A/50A/60A breakers with EMT conduit) for Tesla Wall Connectors, ChargePoint, JuiceBox, Wallbox, and all EV models in double/single garages.<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Get EV Charger Estimate &gt;</a>`;
     }
 
     // 4. Potlights & Lighting Design Intent
@@ -231,7 +231,7 @@ function initChatbot() {
 
     // 6. Pricing, Cost, Quote & Fee Intent
     if (q.includes('price') || q.includes('cost') || q.includes('quote') || q.includes('estimate') || q.includes('rate') || q.includes('fee') || q.includes('how much')) {
-      return `📋 <strong>Transparent Upfront Pricing</strong><br><br>We provide flat-rate, transparent estimates with zero hidden fees before starting any job. You can use our interactive Quote Calculator online!<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Request a Free Quote Online &gt;</a>`;
+      return `📋 <strong>Transparent Upfront Pricing</strong><br><br>We provide transparent upfront pricing that respects your time and budget with zero hidden fees before starting any job. You can use our interactive Quote Calculator online!<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Request a Free Quote Online &gt;</a>`;
     }
 
     // 7. Licensing, ESA Number & Safety Intent
