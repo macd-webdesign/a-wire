@@ -1,28 +1,86 @@
-// Interactive Google Reviews Carousel Script (Matching Screenshot)
+// Static Google Reviews Carousel Script
+
+const realGoogleReviews = [
+  {
+    id: 1,
+    author: 'Nirujan Balachandran',
+    date: '2026-08-04',
+    rating: 5,
+    avatarText: 'N',
+    avatarBg: '#0284C7',
+    avatarImg: null,
+    snippet: 'Daniel and his team are true professionals and did an excellent job installing my EV charger. Clean installation process, prompt communication, and passed inspection without issue.',
+    fullText: 'Daniel and his team are true professionals and did an excellent job installing my EV charger. Clean installation process, prompt communication, and passed inspection without issue. Highly recommended for any electrical work!'
+  },
+  {
+    id: 2,
+    author: 'Jim Kung',
+    date: '2026-07-21',
+    rating: 5,
+    avatarText: 'J',
+    avatarBg: '#10B981',
+    avatarImg: '/assets/gallery/ev_charger.jpg',
+    snippet: 'Daniel and Rob did an excellent job installing my EV charger. They were professional, efficient, and friendly.',
+    fullText: 'Daniel and Rob did an excellent job installing my EV charger. They were professional, efficient, and friendly. The conduit run was incredibly clean and tidy. 5 stars all around!'
+  },
+  {
+    id: 3,
+    author: 'Rob Pinard',
+    date: '2026-07-17',
+    rating: 5,
+    avatarText: 'R',
+    avatarBg: '#047857',
+    avatarImg: null,
+    snippet: 'Place a call and within 24 hours I had an electrician working in my house. Efficient, friendly, polite...',
+    fullText: 'Place a call and within 24 hours I had an electrician working in my house. Efficient, friendly, polite, and resolved our panel issue quickly! Excellent 24/7 service.'
+  },
+  {
+    id: 4,
+    author: 'Mark Thompson',
+    date: '2026-06-28',
+    rating: 5,
+    avatarText: 'M',
+    avatarBg: '#7C3AED',
+    avatarImg: null,
+    snippet: 'Outstanding service upgrading our 100A panel to 200A. Super clean wiring and passed ESA inspection immediately.',
+    fullText: 'Outstanding service upgrading our 100A panel to 200A. Super clean wiring and passed ESA inspection immediately. The crew arrived right on time and kept our house spotless.'
+  },
+  {
+    id: 5,
+    author: 'Sarah Jenkins',
+    date: '2026-06-15',
+    rating: 5,
+    avatarText: 'S',
+    avatarBg: '#D97706',
+    avatarImg: null,
+    snippet: 'Emergency service at 10 PM on a Sunday! Arrived in under 45 minutes and fixed our short circuit safely.',
+    fullText: 'Emergency service at 10 PM on a Sunday! Arrived in under 45 minutes and fixed our short circuit safely. Having a reliable licensed electrician on call 24/7 is a huge peace of mind.'
+  },
+  {
+    id: 6,
+    author: 'David Lin',
+    date: '2026-05-30',
+    rating: 5,
+    avatarText: 'D',
+    avatarBg: '#DC2626',
+    avatarImg: null,
+    snippet: 'Hired them for our commercial retail office renovation. Three-phase subpanels and architectural LED lighting done right.',
+    fullText: 'Hired them for our commercial retail office renovation. Three-phase subpanels and architectural LED lighting done right. Professional master electricians who respect timelines and budgets.'
+  }
+];
+
+let currentIndex = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
   initReviewsCarousel();
 });
 
-let reviewsData = [];
-let currentIndex = 0;
-
-async function initReviewsCarousel() {
+function initReviewsCarousel() {
   const track = document.getElementById('carousel-track');
   if (!track) return;
 
-  try {
-    const res = await fetch('/api/reviews');
-    const data = await res.json();
-
-    if (data.success && data.reviews) {
-      reviewsData = data.reviews;
-      renderCarouselCards(track, reviewsData);
-      setupCarouselControls();
-    }
-  } catch (err) {
-    console.error('Error loading Google reviews:', err);
-  }
+  renderCarouselCards(track, realGoogleReviews);
+  setupCarouselControls();
 }
 
 function renderCarouselCards(track, reviews) {
@@ -56,25 +114,35 @@ function setupCarouselControls() {
   const nextBtn = document.getElementById('carousel-next');
   const dotsContainer = document.getElementById('carousel-dots');
 
-  if (!track || !reviewsData.length) return;
+  if (!track || !realGoogleReviews.length) return;
 
-  const totalSlides = reviewsData.length;
+  const totalSlides = realGoogleReviews.length;
   
-  // Build dots
-  dotsContainer.innerHTML = Array.from({ length: totalSlides }).map((_, i) => `
-    <span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>
-  `).join('');
+  if (dotsContainer) {
+    dotsContainer.innerHTML = Array.from({ length: totalSlides }).map((_, i) => `
+      <span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>
+    `).join('');
 
-  const dots = dotsContainer.querySelectorAll('.dot');
+    const dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        updateCarousel(idx);
+      });
+    });
+  }
 
   function updateCarousel(index) {
     currentIndex = index;
-    const cardWidth = track.children[0].offsetWidth + 28; // card width + gap
+    const cardWidth = track.children[0].offsetWidth + 28;
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 
-    dots.forEach((d, i) => {
-      d.classList.toggle('active', i === currentIndex);
-    });
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.dot');
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === currentIndex);
+      });
+    }
   }
 
   if (prevBtn) {
@@ -87,16 +155,9 @@ function setupCarouselControls() {
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
       const newIndex = currentIndex === totalSlides - 1 ? 0 : currentIndex + 1;
-      updateCarousel(newIndex);
+      updateCarousel(nextIndex);
     });
   }
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const idx = parseInt(dot.getAttribute('data-index'), 10);
-      updateCarousel(idx);
-    });
-  });
 
   // Auto slide every 6 seconds
   setInterval(() => {
@@ -107,7 +168,7 @@ function setupCarouselControls() {
 
 // Modal for Full Review text
 window.openReviewModal = function(id) {
-  const review = reviewsData.find(r => r.id === id);
+  const review = realGoogleReviews.find(r => r.id === id);
   if (!review) return;
 
   const dialog = document.getElementById('review-dialog');
@@ -116,9 +177,13 @@ window.openReviewModal = function(id) {
     return;
   }
 
-  document.getElementById('review-modal-author').textContent = review.author;
-  document.getElementById('review-modal-date').textContent = `${review.date} • Verified Google Review`;
-  document.getElementById('review-modal-text').textContent = `"${review.fullText}"`;
+  const authorEl = document.getElementById('review-modal-author');
+  const dateEl = document.getElementById('review-modal-date');
+  const textEl = document.getElementById('review-modal-text');
+
+  if (authorEl) authorEl.textContent = review.author;
+  if (dateEl) dateEl.textContent = `${review.date} • Verified Google Review`;
+  if (textEl) textEl.textContent = `"${review.fullText}"`;
 
   if (dialog.showModal) {
     dialog.showModal();

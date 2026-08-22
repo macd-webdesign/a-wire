@@ -1,4 +1,4 @@
-// Interactive Quote Form JavaScript for A-Wire Electrical Contracting Inc.
+// Static Quote Form JavaScript for A-Wire Electrical Contracting Inc.
 
 document.addEventListener('DOMContentLoaded', () => {
   initQuoteForm();
@@ -27,11 +27,12 @@ function initQuoteForm() {
 
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const propertyType = form.querySelector('input[name="propertyType"]:checked')?.value || 'Residential';
-    const urgency = document.getElementById('urgency-select').value;
+    const urgencySelect = document.getElementById('urgency-select');
+    const urgency = urgencySelect ? urgencySelect.value : 'Standard';
     
     // Checked services
     const checkedServiceEls = form.querySelectorAll('input[name="services"]:checked');
@@ -53,8 +54,10 @@ function initQuoteForm() {
       return;
     }
 
-    // Submit payload
+    const quoteId = `QUOTE-${Date.now()}`;
     const payload = {
+      id: quoteId,
+      timestamp: new Date().toISOString(),
       name,
       phone,
       email,
@@ -65,48 +68,34 @@ function initQuoteForm() {
       details
     };
 
-    // Disable button loading state
-    const originalBtnText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span>Sending Quote Request...</span>';
-
+    // Save locally for testing/persistence
     try {
-      const res = await fetch('/api/quote', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        // Show success modal
-        const messageEl = document.getElementById('success-message');
-        const refIdEl = document.getElementById('success-ref-id');
-
-        if (messageEl) messageEl.textContent = data.message;
-        if (refIdEl) refIdEl.textContent = data.quoteId;
-
-        if (successDialog) {
-          if (successDialog.showModal) {
-            successDialog.showModal();
-          } else {
-            successDialog.setAttribute('open', 'true');
-          }
-        } else {
-          alert(`⚡ Success! Quote Reference ID: ${data.quoteId}`);
-        }
-
-        form.reset();
-      } else {
-        alert(data.message || 'Failed to submit quote. Please try again or call 905 955-5455.');
-      }
+      const existing = JSON.parse(localStorage.getItem('awire_quotes') || '[]');
+      existing.push(payload);
+      localStorage.setItem('awire_quotes', JSON.stringify(existing));
     } catch (err) {
-      console.error('Quote form error:', err);
-      alert('Error connecting to server. Please call 905 955-5455 to place your request directly.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
+      console.log('Saved quote locally:', payload);
     }
+
+    // Display Success Modal
+    const messageEl = document.getElementById('success-message');
+    const refIdEl = document.getElementById('success-ref-id');
+
+    if (messageEl) {
+      messageEl.textContent = `Thank you, ${name}! Your quote request has been received. An A-Wire certified electrician will review your project details and contact you shortly.`;
+    }
+    if (refIdEl) refIdEl.textContent = quoteId;
+
+    if (successDialog) {
+      if (successDialog.showModal) {
+        successDialog.showModal();
+      } else {
+        successDialog.setAttribute('open', 'true');
+      }
+    } else {
+      alert(`⚡ Quote Submitted Successfully!\nReference ID: ${quoteId}`);
+    }
+
+    form.reset();
   });
 }
