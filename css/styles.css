@@ -488,19 +488,20 @@ ul {
   position: relative;
 }
 
+/* FLYER CARD WRAPPER - FLAT BY DEFAULT, TILTS & LIFTS ON HOVER */
 .flyer-card-wrapper {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 2px solid var(--border-gold);
   box-shadow: var(--shadow-lg);
-  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
   transition: var(--transition);
 }
 
 .flyer-card-wrapper:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-  box-shadow: 0 20px 40px rgba(255, 200, 0, 0.2);
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-6px);
+  box-shadow: 0 20px 45px rgba(255, 200, 0, 0.25);
 }
 
 .hero-card-img {
@@ -1601,11 +1602,7 @@ dialog::backdrop {
   margin-left: 0.5rem;
 }
 
-/* ==========================================================================
-   STATIC AI CHATBOT WIDGET STYLES
-   ========================================================================== */
-
-/* Floating Chat Toggle Button */
+/* STATIC AI CHATBOT WIDGET STYLES */
 .chatbot-toggle-btn {
   position: fixed;
   bottom: 2rem;
@@ -1640,7 +1637,6 @@ dialog::backdrop {
   box-shadow: 0 0 8px #10B981;
 }
 
-/* Chatbot Floating Window */
 .chatbot-widget-panel {
   position: fixed;
   bottom: 6rem;
@@ -1669,7 +1665,6 @@ dialog::backdrop {
   transform: translateY(0) scale(1);
 }
 
-/* Header */
 .chat-panel-header {
   background-color: var(--dark-card);
   padding: 1rem 1.25rem;
@@ -1737,7 +1732,6 @@ dialog::backdrop {
   color: var(--primary-gold);
 }
 
-/* Chat Messages Container */
 .chat-messages-container {
   flex: 1;
   padding: 1.25rem;
@@ -1793,7 +1787,6 @@ dialog::backdrop {
   align-self: flex-end;
 }
 
-/* Action Suggestion Chips */
 .chat-suggestions-strip {
   padding: 0.5rem 1rem;
   display: flex;
@@ -1822,7 +1815,6 @@ dialog::backdrop {
   border-color: var(--primary-gold);
 }
 
-/* Input Area */
 .chat-input-area {
   padding: 0.85rem 1rem;
   background-color: var(--dark-card);
@@ -1868,7 +1860,6 @@ dialog::backdrop {
   transform: scale(1.05);
 }
 
-/* Typing indicator */
 .typing-dots {
   display: inline-flex;
   align-items: center;
