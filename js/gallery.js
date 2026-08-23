@@ -1,8 +1,68 @@
-// Project Photo Gallery Data & Lightbox Interactive Dialog (100% Authentic A-Wire Projects)
+// Project Photo Gallery Data & Lightbox Interactive Dialog (14 Authentic A-Wire Projects)
 
 const galleryProjects = [
   {
     id: 1,
+    title: 'Foyer High-Ceiling Rustic Pendant Chandelier',
+    category: 'lighting',
+    categoryName: 'Lighting Design',
+    location: 'Oakville, ON',
+    image: 'assets/gallery/foyer_pendant_chandelier.jpg',
+    description: 'High-ceiling grand entrance foyer chandelier installation featuring a rustic lantern pendant fixture, high-reach scaffolding setup, and wall dimmer integration.',
+    specs: [
+      'High-Ceiling Stairwell Pendant Chandelier Fixture',
+      'Multi-Bulb Warm Vintage Edison LED Bulbs',
+      'High-Reach Scaffolding & Safety Cable Anchoring',
+      'Customized Wall Switch Dimmer Integration'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Kitchen Remodel LED Potlights & Under-Cabinet Strip Lighting',
+    category: 'lighting',
+    categoryName: 'Lighting Design',
+    location: 'Mississauga, ON',
+    image: 'assets/gallery/kitchen_undercabinet_lighting.jpg',
+    description: 'Modern kitchen electrical renovation featuring ultra-thin recessed LED potlights, continuous under-cabinet LED task strip lighting over subway tile, and dedicated appliance circuits.',
+    specs: [
+      '3000K Dimmable Recessed Ceiling LED Potlights',
+      'Under-Cabinet Low-Voltage LED Strip Task Lighting',
+      'Dedicated Refrigerator, Dishwasher & Microwave Circuits',
+      'Countertop GFCI Receptacle Safety Retrofits'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Open-Concept Living Room Recessed LED Potlights',
+    category: 'lighting',
+    categoryName: 'Lighting Design',
+    location: 'Brampton, ON',
+    image: 'assets/gallery/livingroom_potlights_chandelier.jpg',
+    description: 'Open-concept main floor living space lighting design with 10 recessed LED potlights surrounding a central feature geometric wood open frame dining chandelier.',
+    specs: [
+      '10 Perimeter Recessed 4-Inch LED Potlights',
+      'Central Feature Chandelier Junction Box Feed',
+      'Dual-Zone Wall Dimmer Controls',
+      'Seamless Clean Ceiling Finish & Concealed Wiring'
+    ]
+  },
+  {
+    id: 4,
+    title: 'Eaton Main Panel Upgrade with AFCI Safety Breakers',
+    category: 'panel',
+    categoryName: 'Panel Upgrades',
+    location: 'Milton, ON',
+    image: 'assets/gallery/eaton_panel_afci_breakers.jpg',
+    description: 'Main distribution panel retrofit featuring Eaton Cutler-Hammer panel, combination Arc-Fault Circuit Interrupters (AFCI) on bedroom circuits, and clean circuit directory labeling.',
+    specs: [
+      'Eaton Cutler-Hammer Main Breaker Panel',
+      'Combination Arc-Fault (AFCI) Safety Breakers',
+      'Organized Conductor Bundling & Grounding System',
+      'ESA Code Compliance Certification'
+    ]
+  },
+  {
+    id: 5,
     title: '200-Amp Siemens Main Breaker Panel Upgrade',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -17,7 +77,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 2,
+    id: 6,
     title: 'Siemens BoltShield™ Whole-Home Surge Protection',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -32,7 +92,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 3,
+    id: 7,
     title: 'Heavy-Duty Exterior Utility Meter Base Socket Installation',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -47,7 +107,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 4,
+    id: 8,
     title: 'Laser-Guided Precision Outlet Cutout & Wiring',
     category: 'residential',
     categoryName: 'Residential',
@@ -62,7 +122,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 5,
+    id: 9,
     title: 'Luxury Walk-In Closet Recessed LED Potlights',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -77,7 +137,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 6,
+    id: 10,
     title: 'Dedicated EV Charger Breaker & Panel Line',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -92,7 +152,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 7,
+    id: 11,
     title: 'Level 2 Tesla Wall Connector Installation',
     category: 'ev',
     categoryName: 'EV Chargers',
@@ -107,7 +167,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 8,
+    id: 12,
     title: 'Commercial Office Flat Panel LED Lighting Buildout',
     category: 'commercial',
     categoryName: 'Commercial',
@@ -122,7 +182,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 9,
+    id: 13,
     title: 'Warm Illuminated Entrance Wall Lantern Sconce',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -137,7 +197,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 10,
+    id: 14,
     title: 'Modern Architectural Up/Down Exterior Sconce',
     category: 'residential',
     categoryName: 'Residential',
