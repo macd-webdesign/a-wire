@@ -1,94 +1,79 @@
-// Project Photo Gallery Data & Lightbox Interactive Dialog
+// Project Photo Gallery Data & Lightbox Interactive Dialog (A-Wire Authentic Projects)
 
 const galleryProjects = [
   {
     id: 1,
-    title: '200A Electrical Panel Upgrade & Clean Rewire',
+    title: 'Dedicated EV Charger Breaker & Panel Line Installation',
     category: 'panel',
     categoryName: 'Panel Upgrades',
     location: 'Mississauga, ON',
-    image: 'assets/gallery/panel_upgrade.jpg',
-    description: 'Replaced an obsolete 100A fuse box with a heavy-duty 200 Amp Siemens main breaker panel, copper wiring, whole-home surge protector, and ESA permit inspection.',
+    image: 'assets/gallery/ev_panel_breaker.jpg',
+    description: 'Installed a dedicated 60A double-pole Siemens breaker line inside the main electrical panel for a high-power Level 2 electric vehicle charging system. Fully labelled and ESA code-compliant.',
     specs: [
-      '200 Amp Siemens Main Breaker Panel',
-      'Whole-Home Surge Protection Device (SPD)',
-      'Subpanel expansion for future basement suite',
+      '60A Double-Pole Siemens Main Panel Circuit Breaker',
+      'Dedicated 240V Heavy-Duty EV Charger Circuit',
+      'Thermal Inspection & Main Panel Load Calculation',
       'Passed Electrical Safety Authority (ESA) Inspection'
     ]
   },
   {
     id: 2,
-    title: 'Dual Level 2 Tesla EV Charger Installation',
+    title: 'Level 2 Tesla Wall Connector Installation',
     category: 'ev',
     categoryName: 'EV Chargers',
     location: 'Oakville, ON',
-    image: 'assets/gallery/ev_charger.jpg',
-    description: 'Installed twin 48-Amp Tesla Wall Connectors in a residential double garage with EMT metal conduit runs and dedicated 60A circuit breakers.',
+    image: 'assets/gallery/tesla_ev_charger.jpg',
+    description: 'Outdoor weatherproof installation of a Level 2 Tesla Wall Connector with dedicated 240V feed, custom wood surface mounting, and status LED green indicator verification.',
     specs: [
-      '48A continuous charging power (up to 44 miles of range per hour)',
-      'Surface-mounted EMT metallic conduit',
-      '60-Amp heavy-duty double-pole breaker',
-      'Load management setup for simultaneous vehicle charging'
+      'Level 2 Tesla High-Power Wall Connector (up to 44 mi/hr charge rate)',
+      'Weatherproof Exterior Mounting on Wood Accent Facade',
+      'Heavy-Duty Conductor Conduit Run',
+      'Full ESA Certificate & Safety Verification'
     ]
   },
   {
     id: 3,
-    title: 'Commercial Corporate Office Architectural LED Lighting',
+    title: 'Commercial Office Flat Panel LED Lighting Buildout',
     category: 'commercial',
     categoryName: 'Commercial',
     location: 'Toronto, ON',
-    image: 'assets/gallery/commercial_lighting.jpg',
-    description: 'Designed and installed modern suspended linear LED luminaires, 0-10V dimming controls, and daylight harvesting sensors for a 4,500 sq ft office space.',
+    image: 'assets/gallery/commercial_office_lighting.jpg',
+    description: 'Complete commercial office & training room electrical retrofit featuring energy-efficient 2x4 LED flat troffer panel lights, drop ceiling integration, projector wiring, and perimeter desk outlets.',
     specs: [
-      'Energy-efficient 4000K daylight LED linear fixtures',
-      '0-10V architectural wall dimmers',
-      'Occupancy motion sensors for automatic shutoff',
-      'Commercial three-phase panel distribution'
+      '2x4 Energy-Efficient 4000K Neutral White LED Troffer Panels',
+      'Drop Ceiling Grid Flush-Recessed Installation',
+      'Perimeter Workstation & Ceiling Projector Power Feeds',
+      'Commercial Panel Distribution & Safety Compliance Audit'
     ]
   },
   {
     id: 4,
-    title: 'Luxury Residence Soffit & Architectural Accent Lighting',
+    title: 'Warm Illuminated Entrance Wall Lantern Sconce',
     category: 'lighting',
     categoryName: 'Lighting Design',
     location: 'Brampton, ON',
-    image: 'assets/gallery/exterior_lighting.jpg',
-    description: 'Custom exterior LED soffit recessed lighting installation with automated astronomical timer and dimmable warmth control.',
+    image: 'assets/gallery/exterior_lantern_sconce.jpg',
+    description: 'Precision exterior lighting installation featuring a warm architectural lantern sconce mounted on a classic red brick entrance facade.',
     specs: [
-      '3000K warm white outdoor LED pot lights',
-      'Weather-sealed IP65 aluminum trim rings',
-      'Smart astronomical timer (dusk-to-dawn auto activation)',
-      'Under-cabinet & landscape uplighting'
+      'Weather-Sealed Exterior Fixture Mounting on Brick Wall',
+      'Warm 3000K Ambient LED Illumination',
+      'Concealed Weatherproof Junction Box Wiring',
+      'Smart Dusk-to-Dawn Control Switch Integration'
     ]
   },
   {
     id: 5,
-    title: 'Commercial Retail Unit Electrical Buildout',
-    category: 'commercial',
-    categoryName: 'Commercial',
-    location: 'Vaughan, ON',
-    image: 'assets/gallery/commercial_lighting.jpg',
-    description: 'Full electrical system design for new retail tenant unit, including three-phase 120/208V main panel, POS circuits, and emergency egress lighting.',
-    specs: [
-      'Three-phase 120/208V 200A distribution panel',
-      'Dedicated POS & server room UPS feeds',
-      'Emergency battery pack exit signs & bug-eyes',
-      'ESA commercial safety compliance certification'
-    ]
-  },
-  {
-    id: 6,
-    title: 'Residential Subpanel & Potlight Retrofit',
+    title: 'Modern Architectural Up/Down Exterior Sconce',
     category: 'residential',
     categoryName: 'Residential',
     location: 'Milton, ON',
-    image: 'assets/gallery/panel_upgrade.jpg',
-    description: 'Finished basement electrical package featuring subpanel installation, 18 ultra-thin LED recessed potlights, and AFCI safety breakers.',
+    image: 'assets/gallery/modern_updown_sconce.jpg',
+    description: 'Modern dual-beam LED up/down architectural sconce installed on a red brick garage column for enhanced home curb appeal and security.',
     specs: [
-      '100-Amp feeder subpanel for basement unit',
-      'Ultra-thin 4-inch IC-rated LED potlights',
-      'Combination Arc-Fault Circuit Interrupters (AFCI)',
-      'Tamper-resistant decora outlets'
+      'Dual Up & Down Architectural Beam Pattern',
+      'Heavy-Duty Weatherproof Aluminum Housing',
+      'Energy-Saving Integrated Long-Life LED Module',
+      'Enhanced Perimeter Security & Nighttime Aesthetics'
     ]
   }
 ];
