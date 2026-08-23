@@ -54,11 +54,11 @@ const siteKnowledgeBase = {
   ],
 
   pages: {
-    home: '/index.html',
-    services: '/services.html',
-    gallery: '/gallery.html',
-    quote: '/quote.html',
-    contact: '/contact.html'
+    home: 'index.html',
+    services: 'services.html',
+    gallery: 'gallery.html',
+    quote: 'quote.html',
+    contact: 'contact.html'
   }
 };
 
@@ -211,27 +211,27 @@ function initChatbot() {
 
     // 2. Panel Upgrades & Breakers Intent
     if (q.includes('panel') || q.includes('200a') || q.includes('200 amp') || q.includes('100a') || q.includes('breaker') || q.includes('fuse') || q.includes('subpanel') || q.includes('service upgrade')) {
-      return `💡 <strong>200A Electrical Panel Upgrades</strong><br><br>We replace obsolete 60A/100A fuse & breaker panels with heavy-duty 200-Amp main breaker panels, whole-home surge protection, and full ESA inspection.<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Calculate Panel Quote &gt;</a> | <a href="/services.html" style="color:var(--primary-gold);">View Panel Services &gt;</a>`;
+      return `💡 <strong>200A Electrical Panel Upgrades</strong><br><br>We replace obsolete 60A/100A fuse & breaker panels with heavy-duty 200-Amp main breaker panels, whole-home surge protection, and full ESA inspection.<br><br>👉 <a href="quote.html" style="color:var(--primary-gold); font-weight:bold;">Calculate Panel Quote &gt;</a> | <a href="services.html" style="color:var(--primary-gold);">View Panel Services &gt;</a>`;
     }
 
     // 3. EV Charger & Tesla Intent
     if (q.includes('ev') || q.includes('charger') || q.includes('tesla') || q.includes('level 2') || q.includes('chargepoint') || q.includes('car') || q.includes('electric vehicle')) {
-      return `🔌 <strong>Level 2 EV Charger Installation</strong><br><br>We install dedicated 240V circuits (40A/50A/60A breakers with EMT conduit) for Tesla Wall Connectors, ChargePoint, JuiceBox, Wallbox, and all EV models in double/single garages.<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Get EV Charger Estimate &gt;</a>`;
+      return `🔌 <strong>Level 2 EV Charger Installation</strong><br><br>We install dedicated 240V circuits (40A/50A/60A breakers with EMT conduit) for Tesla Wall Connectors, ChargePoint, JuiceBox, Wallbox, and all EV models in double/single garages.<br><br>👉 <a href="quote.html" style="color:var(--primary-gold); font-weight:bold;">Get EV Charger Estimate &gt;</a>`;
     }
 
     // 4. Potlights & Lighting Design Intent
     if (q.includes('light') || q.includes('potlight') || q.includes('recessed') || q.includes('soffit') || q.includes('led') || q.includes('chandelier') || q.includes('fixture') || q.includes('dimmer')) {
-      return `💡 <strong>Interior & Exterior Lighting Solutions</strong><br><br>We design and install interior LED recessed potlights, 3000K warm soffit accent lighting with smart timers, chandeliers, 0-10V commercial dimming, and garden uplighting.<br><br>👉 <a href="/gallery.html" style="color:var(--primary-gold); font-weight:bold;">View Lighting Photo Gallery &gt;</a>`;
+      return `💡 <strong>Interior & Exterior Lighting Solutions</strong><br><br>We design and install interior LED recessed potlights, 3000K warm soffit accent lighting with smart timers, chandeliers, 0-10V commercial dimming, and garden uplighting.<br><br>👉 <a href="gallery.html" style="color:var(--primary-gold); font-weight:bold;">View Lighting Photo Gallery &gt;</a>`;
     }
 
     // 5. Commercial Electrical Intent
     if (q.includes('commercial') || q.includes('office') || q.includes('retail') || q.includes('warehouse') || q.includes('three phase') || q.includes('3 phase') || q.includes('transformer') || q.includes('ups') || q.includes('high bay')) {
-      return `🏢 <strong>Commercial Electrical Contracting</strong><br><br>We handle commercial new construction, tenant improvements, three-phase 120/208V & 347/600V service upgrades, high-bay warehouse LED lighting, server room UPS feeds, and ESA audits.<br><br>👉 <a href="/services.html" style="color:var(--primary-gold); font-weight:bold;">View Commercial Services &gt;</a>`;
+      return `🏢 <strong>Commercial Electrical Contracting</strong><br><br>We handle commercial new construction, tenant improvements, three-phase 120/208V & 347/600V service upgrades, high-bay warehouse LED lighting, server room UPS feeds, and ESA audits.<br><br>👉 <a href="services.html" style="color:var(--primary-gold); font-weight:bold;">View Commercial Services &gt;</a>`;
     }
 
     // 6. Pricing, Cost, Quote & Fee Intent
     if (q.includes('price') || q.includes('cost') || q.includes('quote') || q.includes('estimate') || q.includes('rate') || q.includes('fee') || q.includes('how much')) {
-      return `📋 <strong>Transparent Upfront Pricing</strong><br><br>We provide transparent upfront pricing that respects your time and budget with zero hidden fees before starting any job. You can use our interactive Quote Calculator online!<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Request a Free Quote Online &gt;</a>`;
+      return `📋 <strong>Transparent Upfront Pricing</strong><br><br>We provide transparent upfront pricing that respects your time and budget with zero hidden fees before starting any job. You can use our interactive Quote Calculator online!<br><br>👉 <a href="quote.html" style="color:var(--primary-gold); font-weight:bold;">Request a Free Quote Online &gt;</a>`;
     }
 
     // 7. Licensing, ESA Number & Safety Intent
@@ -251,20 +251,20 @@ function initChatbot() {
 
     // 10. Reviews & Customer Feedback Intent
     if (q.includes('review') || q.includes('rating') || q.includes('feedback') || q.includes('testimonial') || q.includes('reputation') || q.includes('google')) {
-      return `⭐ <strong>5.0 Star Verified Google Reviews</strong><br><br>Our clients praise our master electricians for fast diagnostics, clean potlight installs, and transparent pricing!<br><br>• Steve M.: <em>"Quick and professional. Highly recommended."</em><br>• Ingrid G.: <em>"Efficient LED lighting conversion at a great price."</em><br>• Sahan T.: <em>"Kitchen island & closet potlights done with minimal mess."</em><br><br>👉 <a href="/index.html#reviews" style="color:var(--primary-gold); font-weight:bold;">Read All Google Reviews &gt;</a>`;
+      return `⭐ <strong>5.0 Star Verified Google Reviews</strong><br><br>Our clients praise our master electricians for fast diagnostics, clean potlight installs, and transparent pricing!<br><br>• Steve M.: <em>"Quick and professional. Highly recommended."</em><br>• Ingrid G.: <em>"Efficient LED lighting conversion at a great price."</em><br>• Sahan T.: <em>"Kitchen island & closet potlights done with minimal mess."</em><br><br>👉 <a href="index.html#reviews" style="color:var(--primary-gold); font-weight:bold;">Read All Google Reviews &gt;</a>`;
     }
 
     // 11. Project Photo Gallery Intent
     if (q.includes('gallery') || q.includes('photo') || q.includes('picture') || q.includes('example') || q.includes('project') || q.includes('portfolio')) {
-      return `📷 <strong>Electrical Project Gallery</strong><br><br>View photos of our panel upgrades, dual Tesla EV chargers, commercial office linear LEDs, and soffit lighting.<br><br>👉 <a href="/gallery.html" style="color:var(--primary-gold); font-weight:bold;">Explore Photo Gallery &gt;</a>`;
+      return `📷 <strong>Electrical Project Gallery</strong><br><br>View photos of our panel upgrades, dual Tesla EV chargers, commercial office linear LEDs, and soffit lighting.<br><br>👉 <a href="gallery.html" style="color:var(--primary-gold); font-weight:bold;">Explore Photo Gallery &gt;</a>`;
     }
 
     // 12. Renovations, Kitchens, Basements & Outlets Intent
     if (q.includes('renov') || q.includes('kitchen') || q.includes('basement') || q.includes('outlet') || q.includes('switch') || q.includes('gfi') || q.includes('gfci') || q.includes('rewir')) {
-      return `🏠 <strong>Home Renovations & Outlet Relocation</strong><br><br>We specialize in kitchen island outlet wiring, coffee bar circuits, basement suite power, GFCI safety replacements, and full home rewiring.<br><br>👉 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Request Renovation Quote &gt;</a>`;
+      return `🏠 <strong>Home Renovations & Outlet Relocation</strong><br><br>We specialize in kitchen island outlet wiring, coffee bar circuits, basement suite power, GFCI safety replacements, and full home rewiring.<br><br>👉 <a href="quote.html" style="color:var(--primary-gold); font-weight:bold;">Request Renovation Quote &gt;</a>`;
     }
 
     // Intelligent Smart Synthesis Fallback
-    return `⚡ <strong>A-Wire Electrical Assistant</strong><br><br>I can help answer questions regarding our residential & commercial electrical services, 200A panel upgrades, EV chargers, ESA Licence #7016330, or service areas.<br><br>• 📞 Call 24/7: <strong><a href="tel:9059555455" style="color:var(--primary-gold);">905 955-5455</a></strong><br>• 📋 <a href="/quote.html" style="color:var(--primary-gold); font-weight:bold;">Get a Free Quote Online &gt;</a><br>• 🛠️ <a href="/services.html" style="color:var(--primary-gold);">Explore All Services &gt;</a>`;
+    return `⚡ <strong>A-Wire Electrical Assistant</strong><br><br>I can help answer questions regarding our residential & commercial electrical services, 200A panel upgrades, EV chargers, ESA Licence #7016330, or service areas.<br><br>• 📞 Call 24/7: <strong><a href="tel:9059555455" style="color:var(--primary-gold);">905 955-5455</a></strong><br>• 📋 <a href="quote.html" style="color:var(--primary-gold); font-weight:bold;">Get a Free Quote Online &gt;</a><br>• 🛠️ <a href="services.html" style="color:var(--primary-gold);">Explore All Services &gt;</a>`;
   }
 }

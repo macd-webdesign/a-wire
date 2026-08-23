@@ -1,176 +1,190 @@
-// Gallery JavaScript for A-Wire Electrical Contracting Inc. (Pure Static)
+// Project Photo Gallery Data & Lightbox Interactive Dialog
 
 const galleryProjects = [
   {
     id: 1,
     title: '200A Electrical Panel Upgrade & Clean Rewire',
     category: 'panel',
-    categoryLabel: 'Panel Upgrades',
-    description: 'Complete replacement of obsolete fused panel with heavy-duty 200-Amp breaker panel, surge protector, and neatly dressed copper wiring.',
-    image: '/assets/gallery/panel_upgrade.jpg',
-    specs: ['200 Amps Service', 'Whole-Home Surge Protector', 'ESA Inspected & Passed'],
-    location: 'Mississauga, ON'
+    categoryName: 'Panel Upgrades',
+    location: 'Mississauga, ON',
+    image: 'assets/gallery/panel_upgrade.jpg',
+    description: 'Replaced an obsolete 100A fuse box with a heavy-duty 200 Amp Siemens main breaker panel, copper wiring, whole-home surge protector, and ESA permit inspection.',
+    specs: [
+      '200 Amp Siemens Main Breaker Panel',
+      'Whole-Home Surge Protection Device (SPD)',
+      'Subpanel expansion for future basement suite',
+      'Passed Electrical Safety Authority (ESA) Inspection'
+    ]
   },
   {
     id: 2,
     title: 'Dual Level 2 Tesla EV Charger Installation',
     category: 'ev',
-    categoryLabel: 'EV Chargers',
-    description: 'High-speed 48A wall connector installation in a double garage with EMT metallic conduit and dedicated 60A circuit breaker.',
-    image: '/assets/gallery/ev_charger.jpg',
-    specs: ['48-Amp Level 2 Charging', 'Hardwired Dedicated Line', 'Code Compliant Grounding'],
-    location: 'Oakville, ON'
+    categoryName: 'EV Chargers',
+    location: 'Oakville, ON',
+    image: 'assets/gallery/ev_charger.jpg',
+    description: 'Installed twin 48-Amp Tesla Wall Connectors in a residential double garage with EMT metal conduit runs and dedicated 60A circuit breakers.',
+    specs: [
+      '48A continuous charging power (up to 44 miles of range per hour)',
+      'Surface-mounted EMT metallic conduit',
+      '60-Amp heavy-duty double-pole breaker',
+      'Load management setup for simultaneous vehicle charging'
+    ]
   },
   {
     id: 3,
     title: 'Commercial Corporate Office Architectural LED Lighting',
     category: 'commercial',
-    categoryLabel: 'Commercial Electrical',
-    description: 'Turnkey interior lighting design featuring suspended linear LED luminaires, motion sensors, and dimmable zone controllers for an open office space.',
-    image: '/assets/gallery/commercial_lighting.jpg',
-    specs: ['0-10V Smart Dimmable LED', 'Energy Star Rated', '0-100% Daylight Harvesting'],
-    location: 'Toronto, ON'
+    categoryName: 'Commercial',
+    location: 'Toronto, ON',
+    image: 'assets/gallery/commercial_lighting.jpg',
+    description: 'Designed and installed modern suspended linear LED luminaires, 0-10V dimming controls, and daylight harvesting sensors for a 4,500 sq ft office space.',
+    specs: [
+      'Energy-efficient 4000K daylight LED linear fixtures',
+      '0-10V architectural wall dimmers',
+      'Occupancy motion sensors for automatic shutoff',
+      'Commercial three-phase panel distribution'
+    ]
   },
   {
     id: 4,
-    title: 'Luxury Residence Soffit & Architectural Dusk Lighting',
+    title: 'Luxury Residence Soffit & Architectural Accent Lighting',
     category: 'lighting',
-    categoryLabel: 'Lighting Design',
-    description: 'Custom exterior architectural accent lighting, warm LED soffit pot lights, smart astronomical timer, and waterproof low-voltage garden uplighting.',
-    image: '/assets/gallery/exterior_lighting.jpg',
-    specs: ['Smart App Control', '3000K Warm White LEDs', 'Weatherproof IP67 Rating'],
-    location: 'Brampton, ON'
+    categoryName: 'Lighting Design',
+    location: 'Brampton, ON',
+    image: 'assets/gallery/exterior_lighting.jpg',
+    description: 'Custom exterior LED soffit recessed lighting installation with automated astronomical timer and dimmable warmth control.',
+    specs: [
+      '3000K warm white outdoor LED pot lights',
+      'Weather-sealed IP65 aluminum trim rings',
+      'Smart astronomical timer (dusk-to-dawn auto activation)',
+      'Under-cabinet & landscape uplighting'
+    ]
   },
   {
     id: 5,
-    title: 'Commercial Tenant Buildout & Power Distribution',
+    title: 'Commercial Retail Unit Electrical Buildout',
     category: 'commercial',
-    categoryLabel: 'Commercial Electrical',
-    description: 'Full electrical rough-in, subpanel distribution, dedicated server room power circuits, and high-bay lighting for commercial retail space.',
-    image: '/assets/gallery/commercial_lighting.jpg',
-    specs: ['Three-Phase 120/208V', 'Dedicated Server UPS Feeds', 'Fire Alarm Integration'],
-    location: 'Vaughan, ON'
+    categoryName: 'Commercial',
+    location: 'Vaughan, ON',
+    image: 'assets/gallery/commercial_lighting.jpg',
+    description: 'Full electrical system design for new retail tenant unit, including three-phase 120/208V main panel, POS circuits, and emergency egress lighting.',
+    specs: [
+      'Three-phase 120/208V 200A distribution panel',
+      'Dedicated POS & server room UPS feeds',
+      'Emergency battery pack exit signs & bug-eyes',
+      'ESA commercial safety compliance certification'
+    ]
   },
   {
     id: 6,
-    title: 'Whole-Home Safety Inspection & Troubleshooting',
+    title: 'Residential Subpanel & Potlight Retrofit',
     category: 'residential',
-    categoryLabel: 'Residential Electrical',
-    description: 'Comprehensive electrical safety audit, thermal scan, arc-fault (AFCI) breaker retrofit, and grounding verification for home buyer closing.',
-    image: '/assets/gallery/panel_upgrade.jpg',
-    specs: ['Infrared Thermal Scan', 'AFCI/GFCI Protection', 'ECRA/ESA Safety Report'],
-    location: 'Milton, ON'
+    categoryName: 'Residential',
+    location: 'Milton, ON',
+    image: 'assets/gallery/panel_upgrade.jpg',
+    description: 'Finished basement electrical package featuring subpanel installation, 18 ultra-thin LED recessed potlights, and AFCI safety breakers.',
+    specs: [
+      '100-Amp feeder subpanel for basement unit',
+      'Ultra-thin 4-inch IC-rated LED potlights',
+      'Combination Arc-Fault Circuit Interrupters (AFCI)',
+      'Tamper-resistant decora outlets'
+    ]
   }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-  initGallery();
+  renderGallery('all');
+  initFilterButtons();
+  initLightboxDialog();
 });
 
-function initGallery() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+function renderGallery(filterCategory) {
+  const gridContainer = document.getElementById('gallery-grid');
+  if (!gridContainer) return;
 
-  // Initial render
-  renderGallery(galleryProjects);
+  const filteredProjects = filterCategory === 'all' 
+    ? galleryProjects 
+    : galleryProjects.filter(p => p.category === filterCategory || (filterCategory === 'residential' && (p.category === 'panel' || p.category === 'ev' || p.category === 'lighting')));
 
-  // Category Filter clicks
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterCategory = btn.getAttribute('data-filter');
-      if (filterCategory === 'all') {
-        renderGallery(galleryProjects);
-      } else {
-        const filtered = galleryProjects.filter(p => p.category === filterCategory);
-        renderGallery(filtered);
-      }
-    });
-  });
-
-  // Modal close handlers
-  const dialog = document.getElementById('gallery-dialog');
-  const closeBtn = document.getElementById('dialog-close');
-  if (closeBtn && dialog) {
-    closeBtn.addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (e) => {
-      const rect = dialog.getBoundingClientRect();
-      if (
-        e.clientX < rect.left ||
-        e.clientX > rect.right ||
-        e.clientY < rect.top ||
-        e.clientY > rect.bottom
-      ) {
-        dialog.close();
-      }
-    });
-  }
-}
-
-function renderGallery(projects) {
-  const galleryGrid = document.getElementById('gallery-grid');
-  if (!galleryGrid) return;
-
-  if (!projects || projects.length === 0) {
-    galleryGrid.innerHTML = '<p class="text-center" style="grid-column: 1/-1;">No projects found in this category.</p>';
-    return;
-  }
-
-  galleryGrid.innerHTML = projects.map(p => `
-    <div class="gallery-card">
+  gridContainer.innerHTML = filteredProjects.map(project => `
+    <div class="gallery-card" data-id="${project.id}">
       <div class="gallery-img-wrap">
-        <img src="${p.image}" alt="${p.title}" class="gallery-img" loading="lazy" width="400" height="300">
-        <span class="gallery-cat-tag">${p.categoryLabel}</span>
+        <img src="${project.image}" alt="${project.title}" class="gallery-img" loading="lazy">
+        <span class="gallery-cat-tag">${project.categoryName}</span>
       </div>
       <div class="gallery-card-body">
-        <h4>${p.title}</h4>
-        <p class="gallery-loc">📍 ${p.location}</p>
-        <p>${p.description}</p>
-        <button type="button" class="btn btn-outline view-project-btn" onclick="openGalleryModal(${p.id})">
+        <div>
+          <h4>${project.title}</h4>
+          <p class="gallery-loc">📍 ${project.location}</p>
+          <p>${project.description.substring(0, 100)}...</p>
+        </div>
+        <button type="button" class="btn btn-secondary btn-block view-project-btn" data-id="${project.id}">
           <span>View Project Details</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
     </div>
   `).join('');
+
+  // Attach event listeners to project detail buttons
+  document.querySelectorAll('.view-project-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const projId = parseInt(e.currentTarget.getAttribute('data-id'), 10);
+      openLightboxDialog(projId);
+    });
+  });
 }
 
-// Lightbox Dialog Opener
-window.openGalleryModal = function(id) {
-  const project = galleryProjects.find(p => p.id === id);
-  if (!project) return;
+function initFilterButtons() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      renderGallery(filter);
+    });
+  });
+}
 
+function initLightboxDialog() {
   const dialog = document.getElementById('gallery-dialog');
-  const imgEl = document.getElementById('dialog-img');
-  const titleEl = document.getElementById('dialog-title');
-  const catEl = document.getElementById('dialog-cat');
-  const locEl = document.getElementById('dialog-loc');
-  const descEl = document.getElementById('dialog-desc');
-  const specsEl = document.getElementById('dialog-specs');
+  const closeBtn = document.getElementById('dialog-close');
   const quoteBtn = document.getElementById('dialog-quote-btn');
 
-  if (imgEl) { imgEl.src = project.image; imgEl.alt = project.title; }
-  if (titleEl) titleEl.textContent = project.title;
-  if (catEl) catEl.textContent = project.categoryLabel;
-  if (locEl) locEl.textContent = `📍 ${project.location}`;
-  if (descEl) descEl.textContent = project.description;
+  if (!dialog) return;
 
-  if (specsEl) {
-    specsEl.innerHTML = project.specs.map(spec => `<li>${spec}</li>`).join('');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => dialog.close());
   }
+
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
 
   if (quoteBtn) {
-    quoteBtn.onclick = () => {
+    quoteBtn.addEventListener('click', () => {
       dialog.close();
-      window.location.href = '/quote.html';
-    };
+      window.location.href = 'quote.html';
+    });
   }
+}
 
-  if (dialog) {
-    if (dialog.showModal) {
-      dialog.showModal();
-    } else {
-      dialog.setAttribute('open', 'true');
-    }
-  }
-};
+function openLightboxDialog(projectId) {
+  const dialog = document.getElementById('gallery-dialog');
+  const project = galleryProjects.find(p => p.id === projectId);
+  if (!dialog || !project) return;
+
+  document.getElementById('dialog-img').src = project.image;
+  document.getElementById('dialog-img').alt = project.title;
+  document.getElementById('dialog-cat').textContent = project.categoryName;
+  document.getElementById('dialog-title').textContent = project.title;
+  document.getElementById('dialog-loc').textContent = `📍 ${project.location}`;
+  document.getElementById('dialog-desc').textContent = project.description;
+
+  const specsList = document.getElementById('dialog-specs');
+  specsList.innerHTML = project.specs.map(s => `<li>${s}</li>`).join('');
+
+  dialog.showModal();
+}
