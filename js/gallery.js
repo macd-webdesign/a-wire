@@ -1,8 +1,38 @@
-// Project Photo Gallery Data & Lightbox Interactive Dialog (14 Authentic A-Wire Projects)
+// Project Photo Gallery Data & Lightbox Interactive Dialog (16 Authentic A-Wire Projects)
 
 const galleryProjects = [
   {
     id: 1,
+    title: 'Agricultural Barn & Equestrian Subpanel Distribution',
+    category: 'commercial',
+    categoryName: 'Commercial',
+    location: 'Milton, ON',
+    image: 'assets/gallery/barn_agricultural_subpanel.jpg',
+    description: 'Commercial agricultural subpanel installation in an equestrian facility with surface EMT metallic conduit runs, industrial disconnect switches, and heavy-duty arena feeds.',
+    specs: [
+      'Heavy-Duty Industrial Barn Subpanel Distribution',
+      'Surface-Mounted EMT Conduit Runs & Heavy Wall Box Enclosures',
+      'Dedicated Arena Lighting & Water Pump Circuits',
+      'ESA Commercial Code Audit & Clearance Certificate'
+    ]
+  },
+  {
+    id: 2,
+    title: '200A Arena & Facility Eaton Main Service Panel',
+    category: 'panel',
+    categoryName: 'Panel Upgrades',
+    location: 'Milton, ON',
+    image: 'assets/gallery/arena_eaton_200a_panel.jpg',
+    description: '200-Amp main service disconnect panel retrofit with Eaton breakers, typed circuit directory labels (East/West Arena Lighting, Feed Room Heaters, Water Pumps), and surge protection.',
+    specs: [
+      '200 Amp Eaton Main Service Disconnect Panel',
+      'Typed & Printed Professional Circuit Directory Index',
+      'Combination AFCI & GFCI Protective Breakers',
+      'Passed Electrical Safety Authority (ESA) Inspection'
+    ]
+  },
+  {
+    id: 3,
     title: 'Foyer High-Ceiling Rustic Pendant Chandelier',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -17,7 +47,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     title: 'Kitchen Remodel LED Potlights & Under-Cabinet Strip Lighting',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -32,7 +62,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     title: 'Open-Concept Living Room Recessed LED Potlights',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -47,7 +77,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 4,
+    id: 6,
     title: 'Eaton Main Panel Upgrade with AFCI Safety Breakers',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -62,7 +92,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 5,
+    id: 7,
     title: '200-Amp Siemens Main Breaker Panel Upgrade',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -77,7 +107,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 6,
+    id: 8,
     title: 'Siemens BoltShield™ Whole-Home Surge Protection',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -92,7 +122,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 7,
+    id: 9,
     title: 'Heavy-Duty Exterior Utility Meter Base Socket Installation',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -107,7 +137,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 8,
+    id: 10,
     title: 'Laser-Guided Precision Outlet Cutout & Wiring',
     category: 'residential',
     categoryName: 'Residential',
@@ -122,7 +152,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 9,
+    id: 11,
     title: 'Luxury Walk-In Closet Recessed LED Potlights',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -137,7 +167,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 10,
+    id: 12,
     title: 'Dedicated EV Charger Breaker & Panel Line',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -152,7 +182,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 11,
+    id: 13,
     title: 'Level 2 Tesla Wall Connector Installation',
     category: 'ev',
     categoryName: 'EV Chargers',
@@ -167,7 +197,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 12,
+    id: 14,
     title: 'Commercial Office Flat Panel LED Lighting Buildout',
     category: 'commercial',
     categoryName: 'Commercial',
@@ -182,7 +212,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 13,
+    id: 15,
     title: 'Warm Illuminated Entrance Wall Lantern Sconce',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -197,7 +227,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 14,
+    id: 16,
     title: 'Modern Architectural Up/Down Exterior Sconce',
     category: 'residential',
     categoryName: 'Residential',
