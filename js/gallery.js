@@ -1,14 +1,89 @@
-// Project Photo Gallery Data & Lightbox Interactive Dialog (A-Wire Authentic Projects)
+// Project Photo Gallery Data & Lightbox Interactive Dialog (100% Authentic A-Wire Projects)
 
 const galleryProjects = [
   {
     id: 1,
-    title: 'Dedicated EV Charger Breaker & Panel Line Installation',
+    title: '200-Amp Siemens Main Breaker Panel Upgrade',
+    category: 'panel',
+    categoryName: 'Panel Upgrades',
+    location: 'Mississauga, ON',
+    image: 'assets/gallery/200a_siemens_panel.jpg',
+    description: 'Complete 200A main breaker panel replacement with Siemens copper bus bar panel, neat conductor organization, clear breaker directory, and Canadian safety certification.',
+    specs: [
+      'Siemens 200 Amp Main Breaker Panel',
+      'Neat Copper Conductor Wiring & Circuit Directory Labeling',
+      'Expansion Capacity for Subpanels & EV Charger Lines',
+      'Passed Electrical Safety Authority (ESA) Inspection'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Siemens BoltShield™ Whole-Home Surge Protection',
+    category: 'panel',
+    categoryName: 'Panel Upgrades',
+    location: 'Oakville, ON',
+    image: 'assets/gallery/surge_protector_boltshield.jpg',
+    description: 'Installation of a Siemens BoltShield™ FSPD whole-home surge protection device with green LED operational indicators, safeguarding sensitive electronics from power spikes.',
+    specs: [
+      'Siemens BoltShield™ FSPD Surge Protective Device',
+      'Active Dual LED Status Verification Display',
+      'Whole-Home Voltage Spike & Lightning Suppression',
+      'Dedicated Service Outlet Receptacle Wiring'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Heavy-Duty Exterior Utility Meter Base Socket Installation',
+    category: 'panel',
+    categoryName: 'Panel Upgrades',
+    location: 'Brampton, ON',
+    image: 'assets/gallery/exterior_meter_base.jpg',
+    description: 'Exterior utility meter base socket installation with heavy-wall rigid PVC conduit feeds and Local Hydro coordination for 200A service upgrades.',
+    specs: [
+      '200A Weatherproof Meter Socket Housing',
+      'Heavy-Wall Rigid PVC Underground Service Conduit',
+      'Utility Coordinated Power Shutoff & Reconnection',
+      'ESA Clearance & Hydro Disconnect Certificate'
+    ]
+  },
+  {
+    id: 4,
+    title: 'Laser-Guided Precision Outlet Cutout & Wiring',
+    category: 'residential',
+    categoryName: 'Residential',
+    location: 'Milton, ON',
+    image: 'assets/gallery/laser_level_outlet_cutout.jpg',
+    description: 'High-precision laser-aligned drywall cutout using green beam laser and Klein drywall saw for kitchen island / backsplash outlet installations.',
+    specs: [
+      'Green Beam Cross-Line Laser Level Alignment',
+      'Dust-Controlled Clean Drywall Cutouts',
+      'Code-Compliant Kitchen Countertop Receptacles',
+      'Minimal Mess & Exacting Wall Placement'
+    ]
+  },
+  {
+    id: 5,
+    title: 'Luxury Walk-In Closet Recessed LED Potlights',
+    category: 'lighting',
+    categoryName: 'Lighting Design',
+    location: 'Vaughan, ON',
+    image: 'assets/gallery/walkin_closet_potlights.jpg',
+    description: 'Custom luxury walk-in closet lighting installation featuring flush-mounted LED potlights, IC-rated fixtures, and dimmable controls.',
+    specs: [
+      'Energy-Efficient Warm 3000K LED Potlights',
+      'IC-Rated Sealed Ceiling Canister Housings',
+      'Architectural Wardrobe & Shelf Illumination',
+      'Custom Wall Dimmer Switch Integration'
+    ]
+  },
+  {
+    id: 6,
+    title: 'Dedicated EV Charger Breaker & Panel Line',
     category: 'panel',
     categoryName: 'Panel Upgrades',
     location: 'Mississauga, ON',
     image: 'assets/gallery/ev_panel_breaker.jpg',
-    description: 'Installed a dedicated 60A double-pole Siemens breaker line inside the main electrical panel for a high-power Level 2 electric vehicle charging system. Fully labelled and ESA code-compliant.',
+    description: 'Installed a dedicated 60A double-pole Siemens breaker line inside the main electrical panel for a high-power Level 2 electric vehicle charging system.',
     specs: [
       '60A Double-Pole Siemens Main Panel Circuit Breaker',
       'Dedicated 240V Heavy-Duty EV Charger Circuit',
@@ -17,7 +92,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 2,
+    id: 7,
     title: 'Level 2 Tesla Wall Connector Installation',
     category: 'ev',
     categoryName: 'EV Chargers',
@@ -32,7 +107,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 3,
+    id: 8,
     title: 'Commercial Office Flat Panel LED Lighting Buildout',
     category: 'commercial',
     categoryName: 'Commercial',
@@ -47,7 +122,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 4,
+    id: 9,
     title: 'Warm Illuminated Entrance Wall Lantern Sconce',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -62,7 +137,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 5,
+    id: 10,
     title: 'Modern Architectural Up/Down Exterior Sconce',
     category: 'residential',
     categoryName: 'Residential',
