@@ -1,4 +1,4 @@
-// Project Photo Gallery Data & Lightbox Interactive Dialog (16 Authentic A-Wire Projects)
+// Project Photo Gallery Data & Lightbox Interactive Dialog (14 Authentic A-Wire Projects)
 
 const galleryProjects = [
   {
@@ -17,20 +17,6 @@ const galleryProjects = [
   },
   {
     id: 2,
-    title: '200A Arena & Facility Eaton Main Service Panel',
-    category: 'panel',
-    categoryName: 'Panel Upgrades',
-    image: 'assets/gallery/arena_eaton_200a_panel.jpg',
-    description: '200-Amp main service disconnect panel retrofit with Eaton breakers, typed circuit directory labels (East/West Arena Lighting, Feed Room Heaters, Water Pumps), and surge protection.',
-    specs: [
-      '200 Amp Eaton Main Service Disconnect Panel',
-      'Typed & Printed Professional Circuit Directory Index',
-      'Combination AFCI & GFCI Protective Breakers',
-      'Passed Electrical Safety Authority (ESA) Inspection'
-    ]
-  },
-  {
-    id: 3,
     title: 'Foyer High-Ceiling Rustic Pendant Chandelier',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -44,7 +30,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     title: 'Kitchen Remodel LED Potlights & Under-Cabinet Strip Lighting',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -58,7 +44,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 5,
+    id: 4,
     title: 'Open-Concept Living Room Recessed LED Potlights',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -72,21 +58,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 6,
-    title: 'Eaton Main Panel Upgrade with AFCI Safety Breakers',
-    category: 'panel',
-    categoryName: 'Panel Upgrades',
-    image: 'assets/gallery/eaton_panel_afci_breakers.jpg',
-    description: 'Main distribution panel retrofit featuring Eaton Cutler-Hammer panel, combination Arc-Fault Circuit Interrupters (AFCI) on bedroom circuits, and clean circuit directory labeling.',
-    specs: [
-      'Eaton Cutler-Hammer Main Breaker Panel',
-      'Combination Arc-Fault (AFCI) Safety Breakers',
-      'Organized Conductor Bundling & Grounding System',
-      'ESA Code Compliance Certification'
-    ]
-  },
-  {
-    id: 7,
+    id: 5,
     title: '200-Amp Siemens Main Breaker Panel Upgrade',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -100,7 +72,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 8,
+    id: 6,
     title: 'Siemens BoltShield™ Whole-Home Surge Protection',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -113,7 +85,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 9,
+    id: 7,
     title: 'Heavy-Duty Exterior Utility Meter Base Socket Installation',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -127,7 +99,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 10,
+    id: 8,
     title: 'Laser-Guided Precision Outlet Cutout & Wiring',
     category: 'residential',
     categoryName: 'Residential',
@@ -141,7 +113,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 11,
+    id: 9,
     title: 'Luxury Walk-In Closet Recessed LED Potlights',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -155,7 +127,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 12,
+    id: 10,
     title: 'Dedicated EV Charger Breaker & Panel Line',
     category: 'panel',
     categoryName: 'Panel Upgrades',
@@ -169,7 +141,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 13,
+    id: 11,
     title: 'Level 2 Tesla Wall Connector Installation',
     category: 'ev',
     categoryName: 'EV Chargers',
@@ -183,7 +155,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 14,
+    id: 12,
     title: 'Commercial Office Flat Panel LED Lighting Buildout',
     category: 'commercial',
     categoryName: 'Commercial',
@@ -197,7 +169,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 15,
+    id: 13,
     title: 'Warm Illuminated Entrance Wall Lantern Sconce',
     category: 'lighting',
     categoryName: 'Lighting Design',
@@ -211,7 +183,7 @@ const galleryProjects = [
     ]
   },
   {
-    id: 16,
+    id: 14,
     title: 'Modern Architectural Up/Down Exterior Sconce',
     category: 'residential',
     categoryName: 'Residential',
