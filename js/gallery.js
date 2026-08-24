@@ -86,16 +86,16 @@ const galleryProjects = [
   },
   {
     id: 7,
-    title: 'Heavy-Duty Exterior Utility Meter Base Socket Installation',
+    title: 'Exterior Utility Meter Base Generlink Installation',
     category: 'panel',
     categoryName: 'Panel Upgrades',
     image: 'assets/gallery/exterior_meter_base.jpg',
-    description: 'Exterior utility meter base socket installation with heavy-wall rigid PVC conduit feeds and Local Hydro coordination for 200A service upgrades.',
+    description: 'Exterior utility meter base socket to Generlink installation for seamless emergency generator power transfer.',
     specs: [
-      '200A Weatherproof Meter Socket Housing',
-      'Heavy-Wall Rigid PVC Underground Service Conduit',
-      'Utility Coordinated Power Shutoff & Reconnection',
-      'ESA Clearance & Hydro Disconnect Certificate'
+      'Authorized Generlink Installer',
+      'Emergency Backup Generator Power Transfer',
+      '200A Weatherproof Meter Socket Collar Integration',
+      'Utility Coordinated Disconnect & ESA Clearance Certificate'
     ]
   },
   {
