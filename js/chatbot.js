@@ -48,15 +48,7 @@ const chatbotKnowledge = {
     { author: 'Ingrid G.', text: 'Ashan converted my fluorescent lighting to energy efficient LED lighting at a reasonable price. Highly recommend!' },
     { author: 'Sahan T.', text: 'Wired our new kitchen island, coffee bar, and walk-in closet potlights. Precise, clean, minimal mess.' },
     { author: 'Dave D.', text: 'Replaced old GFI receptacle and put in dusk-to-dawn timer for outdoor lights + under counter LED strip lights.' }
-  ],
-
-  pages: {
-    home: 'index.html',
-    services: 'services.html',
-    gallery: 'gallery.html',
-    quote: 'quote.html',
-    contact: 'contact.html'
-  }
+  ]
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -66,45 +58,47 @@ document.addEventListener('DOMContentLoaded', () => {
 function initChatbotUI() {
   const widgetContainer = document.createElement('div');
   widgetContainer.id = 'awire-chatbot-widget';
-  widgetContainer.className = 'chatbot-container';
+  widgetContainer.className = 'chatbot-widget-wrapper';
 
   widgetContainer.innerHTML = `
     <!-- Floating Action Button -->
     <button type="button" id="chatbot-toggle-btn" class="chatbot-toggle-btn" aria-label="Open A-Wire Assistant Chat">
-      <span class="chatbot-btn-icon">⚡</span>
-      <span class="chatbot-btn-badge">AI Assist</span>
+      <span>⚡ AI Assistant</span>
+      <span class="chatbot-badge-dot"></span>
     </button>
 
-    <!-- Chat Modal Window -->
-    <div id="chatbot-window" class="chatbot-window hidden" role="dialog" aria-labelledby="chatbot-header-title">
-      <div class="chatbot-header">
-        <div class="chatbot-avatar">⚡</div>
-        <div class="chatbot-header-info">
-          <h3 id="chatbot-header-title">A-Wire Assistant</h3>
-          <span class="chatbot-status"><span class="status-dot"></span> Online • ECRA/ESA# 7016330</span>
+    <!-- Chat Modal Window Panel -->
+    <div id="chatbot-widget-panel" class="chatbot-widget-panel">
+      <div class="chat-panel-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar-wrap">⚡</div>
+          <div class="chat-title-group">
+            <h4>A-Wire Assistant</h4>
+            <span class="chat-status-pill"><span class="chat-status-dot"></span> Online • ECRA/ESA# 7016330</span>
+          </div>
         </div>
-        <button type="button" id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat">&times;</button>
+        <button type="button" id="chat-close-btn" class="chat-close-btn" aria-label="Close Chat">&times;</button>
       </div>
 
-      <div id="chatbot-messages" class="chatbot-messages">
-        <div class="chat-msg bot-msg">
+      <div id="chat-messages-container" class="chat-messages-container">
+        <div class="chat-msg chat-msg-bot">
           <div class="msg-bubble">
-             👋 Hello! Welcome to <strong>A-Wire Electrical Contracting</strong>.<br><br>How can I help you today? Ask me about our <strong>panel upgrades, EV chargers, emergency generators & Generlink, potlights, or commercial wiring</strong>!
+            👋 Hello! Welcome to <strong>A-Wire Electrical Contracting</strong>.<br><br>How can I help you today? Ask me about our <strong>panel upgrades, EV chargers, emergency power generators & Generlink, potlights, or commercial wiring</strong>!
           </div>
         </div>
       </div>
 
-      <div class="chatbot-quick-chips">
+      <div class="chat-suggestions-strip">
         <button type="button" class="chip-btn" data-query="emergency power generators">Generators & Generlink</button>
         <button type="button" class="chip-btn" data-query="commercial services">Commercial Services</button>
         <button type="button" class="chip-btn" data-query="panel upgrade cost">Panel Upgrade</button>
         <button type="button" class="chip-btn" data-query="EV charger install">EV Charger</button>
       </div>
 
-      <form id="chatbot-form" class="chatbot-input-form">
-        <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Ask a question about our electrical services..." autocomplete="off" required>
-        <button type="submit" class="chatbot-send-btn" aria-label="Send Message">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      <form id="chat-input-form" class="chat-input-area">
+        <input type="text" id="chat-input-field" class="chat-input-field" placeholder="Ask a question about our services..." autocomplete="off" required>
+        <button type="submit" class="btn btn-primary" aria-label="Send Message" style="padding: 0.6rem 1rem;">
+          <span>Send</span>
         </button>
       </form>
     </div>
@@ -113,21 +107,21 @@ function initChatbotUI() {
   document.body.appendChild(widgetContainer);
 
   const toggleBtn = document.getElementById('chatbot-toggle-btn');
-  const closeBtn = document.getElementById('chatbot-close-btn');
-  const chatWindow = document.getElementById('chatbot-window');
-  const chatForm = document.getElementById('chatbot-form');
-  const chatInput = document.getElementById('chatbot-input');
-  const messagesContainer = document.getElementById('chatbot-messages');
+  const closeBtn = document.getElementById('chat-close-btn');
+  const widgetPanel = document.getElementById('chatbot-widget-panel');
+  const chatForm = document.getElementById('chat-input-form');
+  const chatInput = document.getElementById('chat-input-field');
+  const messagesContainer = document.getElementById('chat-messages-container');
 
   toggleBtn.addEventListener('click', () => {
-    chatWindow.classList.toggle('hidden');
-    if (!chatWindow.classList.contains('hidden')) {
+    widgetPanel.classList.toggle('open');
+    if (widgetPanel.classList.contains('open')) {
       chatInput.focus();
     }
   });
 
   closeBtn.addEventListener('click', () => {
-    chatWindow.classList.add('hidden');
+    widgetPanel.classList.remove('open');
   });
 
   document.querySelectorAll('.chip-btn').forEach(chip => {
@@ -159,7 +153,7 @@ function initChatbotUI() {
 
   function appendMessage(content, sender) {
     const msgDiv = document.createElement('div');
-    msgDiv.className = `chat-msg ${sender === 'user' ? 'user-msg' : 'bot-msg'}`;
+    msgDiv.className = `chat-msg ${sender === 'user' ? 'chat-msg-user' : 'chat-msg-bot'}`;
     msgDiv.innerHTML = `<div class="msg-bubble">${content}</div>`;
     messagesContainer.appendChild(msgDiv);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
@@ -168,8 +162,8 @@ function initChatbotUI() {
   function showTypingIndicator() {
     const typingDiv = document.createElement('div');
     typingDiv.id = 'chatbot-typing';
-    typingDiv.className = 'chat-msg bot-msg';
-    typingDiv.innerHTML = `<div class="msg-bubble typing-dots"><span>.</span><span>.</span><span>.</span></div>`;
+    typingDiv.className = 'chat-msg chat-msg-bot';
+    typingDiv.innerHTML = `<div class="msg-bubble">Typing...</div>`;
     messagesContainer.appendChild(typingDiv);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
   }
