@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Request a Quote | A-Wire Electrical Contracting Inc.</title>
   <meta name="description" content="Request a free electrical estimate from A-Wire Electrical Contracting Inc. Fast pricing for panel upgrades, EV chargers, emergency power backup generators, Generlink installation, potlights, and commercial buildouts. ECRA/ESA# 7016330.">
   
-  <!-- Modern Clean Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- CSS Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION -->
-  <header class="site-header">
-    <div class="top-bar">
-      <div class="container top-bar-content">
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-info">
+        <span class="badge-esa">ECRA/ESA# 7016330</span>
         <span class="top-tagline">⚡ Big or Small, We Wire It All. Residential & Commercial.</span>
-        <div class="top-contacts">
-          <span class="esa-badge">ECRA/ESA# 7016330</span>
-          <a href="tel:9059555455" class="top-phone">📞 905 955-5455</a>
-        </div>
+      </div>
+      <div class="top-bar-contact">
+        <span class="pulse-dot"></span>
+        <span class="emergency-badge">24/7 EMERGENCY SERVICE</span>
+        <a href="tel:9059555455" class="top-phone">📞 905 955-5455</a>
       </div>
     </div>
+  </aside>
 
-    <nav class="main-nav">
-      <div class="container nav-container">
-        <a href="index.html" class="brand-logo-link">
-          <img src="assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="brand-logo" width="180" height="55">
-        </a>
-        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-        <ul class="nav-links" id="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Photo Gallery</a></li>
-          <li><a href="quote.html" class="active">Request a Quote</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li class="nav-cta-item"><a href="tel:9059555455" class="btn btn-primary nav-btn-call">Emergency 24/7</a></li>
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="brand-logo" width="220" height="60">
+      </a>
+
+      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="gallery.html" class="nav-link">Photo Gallery</a></li>
+          <li><a href="quote.html" class="nav-link active">Request a Quote</a></li>
+          <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:9059555455" class="btn btn-phone">905 955-5455</a>
+        <a href="quote.html" class="btn btn-primary nav-cta">Get Free Quote</a>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <!-- MAIN QUOTE CONTENT -->
-  <main id="main-content">
-    
-    <!-- PAGE HERO -->
-    <section class="page-hero">
+  <main>
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
       <div class="container">
         <span class="sub-heading">FAST & TRANSPARENT PRICING</span>
         <h1>Request Your Electrical Estimate</h1>
@@ -212,11 +219,11 @@
   </dialog>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
+  <footer class="main-footer">
+    <div class="container footer-container">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="footer-logo" width="180" height="55">
-        <p>Powering your home. Energizing your business. Trusted electrical contracting across the Greater Toronto Area.</p>
+        <img src="assets/logo.png" alt="A-Wire Logo" class="footer-logo" width="180" height="50">
+        <p>A-Wire Electrical Contracting Inc. | ECRA/ESA# 7016330</p>
       </div>
 
       <div class="footer-links">
@@ -226,33 +233,20 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="gallery.html">Photo Gallery</a></li>
           <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="index.html#reviews">Google Reviews</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
 
-      <div class="footer-services">
-        <h4>Services</h4>
-        <ul>
-          <li>Panel Upgrades & Breakers</li>
-          <li>Emergency Power & Generators</li>
-          <li>Level 2 EV Charger Install</li>
-          <li>Lighting Design & Potlights</li>
-          <li>24/7 Emergency Repairs</li>
-          <li>Commercial Buildouts</li>
-        </ul>
-      </div>
-
       <div class="footer-contact">
-        <h4>24/7 Emergency Line</h4>
+        <h4>24/7 Line</h4>
         <a href="tel:9059555455" class="footer-phone">📞 905 955-5455</a>
-        <p>Email: awire.ec@gmail.com</p>
-        <p>Serving Mississauga, Oakville, Brampton, Toronto & GTA</p>
+        <p>awire.ec@gmail.com</p>
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container footer-bottom-content">
-        <p>© 2026 A-Wire Electrical Contracting Inc. All Rights Reserved. Licensed • Insured • Reliable • Professional.</p>
+        <p>© 2026 A-Wire Electrical Contracting Inc. All Rights Reserved.</p>
         <p>ECRA/ESA# 7016330</p>
       </div>
     </div>
@@ -260,5 +254,6 @@
 
   <script src="js/main.js"></script>
   <script src="js/quote-form.js"></script>
+  <script src="js/chatbot.js"></script>
 </body>
 </html>
