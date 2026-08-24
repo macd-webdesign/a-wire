@@ -109,8 +109,7 @@ const galleryProjects = [
     specs: [
       'Siemens BoltShield™ FSPD Surge Protective Device',
       'Active Dual LED Status Verification Display',
-      'Whole-Home Voltage Spike & Lightning Suppression',
-      'Dedicated Service Outlet Receptacle Wiring'
+      'Whole-Home Voltage Spike & Lightning Suppression'
     ]
   },
   {
