@@ -93,9 +93,7 @@ const galleryProjects = [
     description: 'Exterior utility meter base socket to Generlink installation for seamless emergency generator power transfer.',
     specs: [
       'Authorized Generlink Installer',
-      'Emergency Backup Generator Power Transfer',
-      '200A Weatherproof Meter Socket Collar Integration',
-      'Utility Coordinated Disconnect & ESA Clearance Certificate'
+      'Emergency Backup Generator Power Transfer'
     ]
   },
   {
