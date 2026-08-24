@@ -1,150 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Request a Quote | A-Wire Electrical Contracting Inc.</title>
-  <meta name="description" content="Request a fast, free electrical estimate from A-Wire Electrical Contracting Inc. Panel upgrades, EV chargers, lighting design & emergency repairs. ECRA/ESA# 7016330.">
+  <meta name="description" content="Request a free electrical estimate from A-Wire Electrical Contracting Inc. Fast pricing for panel upgrades, EV chargers, emergency power backup generators, Generlink installation, potlights, and commercial buildouts. ECRA/ESA# 7016330.">
   
+  <!-- Modern Clean Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <aside class="top-bar">
-    <div class="container top-bar-container">
-      <div class="top-bar-info">
-        <span class="badge-esa">ECRA/ESA# 7016330</span>
+  <!-- HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-content">
         <span class="top-tagline">⚡ Big or Small, We Wire It All. Residential & Commercial.</span>
-      </div>
-      <div class="top-bar-contact">
-        <span class="pulse-dot"></span>
-        <span class="emergency-badge">24/7 EMERGENCY SERVICE</span>
-        <a href="tel:9059555455" class="top-phone">📞 905 955-5455</a>
+        <div class="top-contacts">
+          <span class="esa-badge">ECRA/ESA# 7016330</span>
+          <a href="tel:9059555455" class="top-phone">📞 905 955-5455</a>
+        </div>
       </div>
     </div>
-  </aside>
 
-  <!-- Main Header with Transparent Logo -->
-  <header class="main-header" id="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="brand-logo" width="220" height="60">
-      </a>
-
-      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="gallery.html" class="nav-link">Photo Gallery</a></li>
-          <li><a href="quote.html" class="nav-link active">Request a Quote</a></li>
-          <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+    <nav class="main-nav">
+      <div class="container nav-container">
+        <a href="index.html" class="brand-logo-link">
+          <img src="assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="brand-logo" width="180" height="55">
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="quote.html" class="active">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="nav-cta-item"><a href="tel:9059555455" class="btn btn-primary nav-btn-call">Emergency 24/7</a></li>
         </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="tel:9059555455" class="btn btn-phone">905 955-5455</a>
-        <a href="quote.html" class="btn btn-primary nav-cta">Get Free Quote</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <main>
-    <!-- PAGE BANNER -->
-    <section class="page-banner">
+  <!-- MAIN QUOTE CONTENT -->
+  <main id="main-content">
+    
+    <!-- PAGE HERO -->
+    <section class="page-hero">
       <div class="container">
-        <span class="sub-heading">TRANSPARENT ESTIMATES</span>
-        <h1>Request an Electrical Quote</h1>
-        <p>Tell us about your project requirements and get a detailed, no-obligation estimate from a certified master electrician.</p>
+        <span class="sub-heading">FAST & TRANSPARENT PRICING</span>
+        <h1>Request Your Electrical Estimate</h1>
+        <p>Fill out the form below or call us directly at 905 955-5455 for fast scheduling and upfront quotes with zero hidden fees.</p>
       </div>
     </section>
 
-    <!-- QUOTE CALCULATOR FORM SECTION -->
-    <section class="page-section">
+    <!-- QUOTE FORM SECTION -->
+    <section class="quote-section page-section">
       <div class="container">
-        <div class="quote-wrapper">
-          <aside class="quote-sidebar">
-            <div class="sidebar-header">
-              <span class="quote-pill">⚡ FAST RESPONSE</span>
-              <h2>Why Request a Quote With Us?</h2>
-              <p>We review project requirements quickly and provide upfront pricing that respects your time and budget with zero hidden fees.</p>
+        <div class="quote-grid-layout">
+          
+          <!-- LEFT SIDE: INTERACTIVE FORM -->
+          <div class="quote-form-card">
+            <div class="form-header">
+              <h2>Electrical Project Details</h2>
+              <p>Tell us a little bit about what you need done:</p>
             </div>
 
-            <div class="contact-quick-list">
-              <div class="quick-item">
-                <span class="icon">📞</span>
-                <div>
-                  <strong>Need Immediate Dispatch?</strong>
-                  <a href="tel:9059555455">905 955-5455</a>
-                </div>
-              </div>
-
-              <div class="quick-item">
-                <span class="icon">✉️</span>
-                <div>
-                  <strong>Email Direct</strong>
-                  <span>awire.ec@gmail.com</span>
-                </div>
-              </div>
-
-              <div class="quick-item">
-                <span class="icon">📜</span>
-                <div>
-                  <strong>ESA Licence</strong>
-                  <span>ECRA/ESA # 7016330</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- FULL FLYER POSTER SHOWCASE -->
-            <div style="margin-top: 2rem;">
-              <span class="sub-heading" style="margin-bottom: 0.75rem;">OFFICIAL SERVICE OVERVIEW</span>
-              <div class="flyer-card-wrapper">
-                <img src="assets/flyer_full.png" alt="A-Wire Electrical Contracting Complete Overview Flyer" class="flyer-thumbnail" width="400" height="720" style="width:100%; height:auto; display:block;">
-              </div>
-            </div>
-          </aside>
-
-          <!-- INTERACTIVE FORM -->
-          <div class="quote-form-container">
-            <form id="quote-form" class="quote-form">
-              <h3>Electrical Service Calculator</h3>
-              <p class="form-desc">Select your service details below for a quick tailored quote response.</p>
-
+            <form id="quote-calculator-form" class="interactive-quote-form" novalidate>
+              
               <!-- STEP 1: Property Type -->
               <div class="form-step">
                 <span class="step-label">1. Property Type</span>
-                <div class="radio-grid">
+                <div class="radio-card-group">
                   <label class="radio-card">
                     <input type="radio" name="propertyType" value="Residential" checked>
                     <span class="radio-title">🏠 Residential</span>
-                    <span class="radio-sub">Home, Condo, Townhome</span>
+                    <span class="radio-desc">Home, condo, townhome</span>
                   </label>
                   <label class="radio-card">
                     <input type="radio" name="propertyType" value="Commercial">
                     <span class="radio-title">🏢 Commercial</span>
-                    <span class="radio-sub">Office, Retail, Industrial</span>
+                    <span class="radio-desc">Office, retail, warehouse</span>
                   </label>
                 </div>
               </div>
 
-              <!-- STEP 2: Required Services -->
+              <!-- STEP 2: Service Requested -->
               <div class="form-step">
-                <span class="step-label">2. Select Required Services (Check all that apply)</span>
+                <span class="step-label">2. Select Services Needed</span>
                 <div class="checkbox-grid">
                   <label class="checkbox-item">
                     <input type="checkbox" name="services" value="Panel Upgrade (200A)">
                     <span>Panel Upgrade (200A)</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="services" value="Emergency Power & Generators (Generlink)">
+                    <span>Emergency Power & Generators</span>
                   </label>
                   <label class="checkbox-item">
                     <input type="checkbox" name="services" value="Level 2 EV Charger">
@@ -185,67 +144,79 @@
               <!-- STEP 4: Contact Details -->
               <div class="form-step">
                 <span class="step-label">4. Your Contact Information</span>
-                <div class="form-row">
+                <div class="form-inputs-grid">
                   <div class="form-group">
-                    <label for="quote-name">Full Name *</label>
-                    <input type="text" id="quote-name" class="form-control" placeholder="John Smith" required>
+                    <label for="user-name">Full Name *</label>
+                    <input type="text" id="user-name" class="form-control" placeholder="e.g. John Smith" required>
                   </div>
                   <div class="form-group">
-                    <label for="quote-phone">Phone Number *</label>
-                    <input type="tel" id="quote-phone" class="form-control" placeholder="(905) 555-0123" required>
+                    <label for="user-phone">Phone Number *</label>
+                    <input type="tel" id="user-phone" class="form-control" placeholder="e.g. (905) 955-5455" required>
                   </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="quote-email">Email Address</label>
-                    <input type="email" id="quote-email" class="form-control" placeholder="john@example.com">
+                  <div class="form-group full-width">
+                    <label for="user-email">Email Address *</label>
+                    <input type="email" id="user-email" class="form-control" placeholder="e.g. john@example.com" required>
                   </div>
-                  <div class="form-group">
-                    <label for="quote-address">Service City / Address</label>
-                    <input type="text" id="quote-address" class="form-control" placeholder="Mississauga, ON">
+                  <div class="form-group full-width">
+                    <label for="project-notes">Project Details / Notes</label>
+                    <textarea id="project-notes" class="form-control" rows="3" placeholder="Describe your project, panel size, room dimensions, generator specs, or special requests..."></textarea>
                   </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="quote-details">Project Details & Notes</label>
-                  <textarea id="quote-details" class="form-control" rows="4" placeholder="Describe the job (e.g. replacing panel in garage, adding 6 potlights in main floor living room)..."></textarea>
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-lg btn-block" id="quote-submit-btn">
+              <!-- SUBMIT BUTTON -->
+              <button type="submit" class="btn btn-primary btn-block btn-large submit-btn">
                 <span>Submit Quote Request</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
-
-              <p class="form-notice">🔒 Your information is confidential and will only be used by A-Wire Electrical to contact you regarding this quote.</p>
             </form>
           </div>
+
+          <!-- RIGHT SIDE: FLYER CARD & CONTACT SIDEBAR -->
+          <div class="quote-sidebar">
+            
+            <!-- FLYER CARD WRAPPER WITH 3D FLIP TILT -->
+            <div class="flyer-card-wrapper sidebar-flyer">
+              <img src="assets/flyer_full.png" alt="A-Wire Electrical Contracting Full Poster Flyer" class="hero-card-img" width="500" height="700">
+            </div>
+
+            <!-- DIRECT CONTACT BOX -->
+            <div class="sidebar-contact-card">
+              <h3>Need Immediate Help?</h3>
+              <p>Prefer speaking directly to a master electrician right now?</p>
+              <a href="tel:9059555455" class="btn btn-primary btn-block">📞 Call 905 955-5455</a>
+              <div class="sidebar-info-list">
+                <p><strong>Licence:</strong> ECRA/ESA# 7016330</p>
+                <p><strong>Pricing:</strong> Upfront pricing with zero hidden fees</p>
+                <p><strong>Response:</strong> 24/7 Emergency Dispatch Available</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Quote Success Modal Dialog -->
-  <dialog id="success-dialog" class="dialog-modal">
+  <!-- SUCCESS MODAL DIALOG -->
+  <dialog id="quote-success-dialog" class="success-dialog">
     <div class="dialog-content text-center">
-      <div class="success-icon">✓</div>
+      <div class="dialog-icon">⚡</div>
       <h3>Quote Request Received!</h3>
-      <p id="success-message">Thank you! An A-Wire certified electrician will review your project details and contact you shortly.</p>
-      <div class="success-ref">
-        <span>Quote Reference ID:</span>
-        <strong id="success-ref-id">QUOTE-1001</strong>
-      </div>
-      <button type="button" class="btn btn-primary btn-block" id="success-close-btn">Return to Website</button>
+      <p>Thank you for reaching out to A-Wire Electrical Contracting. Ashan or one of our team members will review your details and contact you shortly.</p>
+      <p>Need urgent service? Call us right away at <strong>905 955-5455</strong>.</p>
+      <button type="button" class="btn btn-primary" id="dialog-close-btn">Close</button>
     </div>
   </dialog>
 
   <!-- FOOTER -->
-  <footer class="main-footer">
-    <div class="container footer-container">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="A-Wire Logo" class="footer-logo" width="180" height="50">
-        <p>A-Wire Electrical Contracting Inc. | ECRA/ESA# 7016330</p>
+        <img src="assets/logo.png" alt="A-Wire Electrical Contracting Inc. Logo" class="footer-logo" width="180" height="55">
+        <p>Powering your home. Energizing your business. Trusted electrical contracting across the Greater Toronto Area.</p>
       </div>
 
       <div class="footer-links">
@@ -255,20 +226,33 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="gallery.html">Photo Gallery</a></li>
           <li><a href="quote.html">Request a Quote</a></li>
-          <li><a href="index.html#reviews">Google Reviews</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
 
+      <div class="footer-services">
+        <h4>Services</h4>
+        <ul>
+          <li>Panel Upgrades & Breakers</li>
+          <li>Emergency Power & Generators</li>
+          <li>Level 2 EV Charger Install</li>
+          <li>Lighting Design & Potlights</li>
+          <li>24/7 Emergency Repairs</li>
+          <li>Commercial Buildouts</li>
+        </ul>
+      </div>
+
       <div class="footer-contact">
-        <h4>24/7 Line</h4>
+        <h4>24/7 Emergency Line</h4>
         <a href="tel:9059555455" class="footer-phone">📞 905 955-5455</a>
-        <p>awire.ec@gmail.com</p>
+        <p>Email: awire.ec@gmail.com</p>
+        <p>Serving Mississauga, Oakville, Brampton, Toronto & GTA</p>
       </div>
     </div>
+
     <div class="footer-bottom">
       <div class="container footer-bottom-content">
-        <p>© 2026 A-Wire Electrical Contracting Inc. All Rights Reserved.</p>
+        <p>© 2026 A-Wire Electrical Contracting Inc. All Rights Reserved. Licensed • Insured • Reliable • Professional.</p>
         <p>ECRA/ESA# 7016330</p>
       </div>
     </div>
@@ -276,6 +260,5 @@
 
   <script src="js/main.js"></script>
   <script src="js/quote-form.js"></script>
-  <script src="js/chatbot.js"></script>
 </body>
 </html>
