@@ -3,16 +3,16 @@
 const galleryProjects = [
   {
     id: 1,
-    title: 'Agricultural Barn & Equestrian Subpanel Distribution',
+    title: 'Agricultural Arc Fault Protection Installation',
     category: 'commercial',
     categoryName: 'Commercial',
     image: 'assets/gallery/barn_agricultural_subpanel.jpg',
-    description: 'Commercial agricultural subpanel installation in an equestrian facility with surface EMT metallic conduit runs, industrial disconnect switches, and heavy-duty arena feeds.',
+    description: 'Agricultural arc fault protection installation in an equestrian facility as an insurance requirement.',
     specs: [
-      'Heavy-Duty Industrial Barn Subpanel Distribution',
-      'Surface-Mounted EMT Conduit Runs & Heavy Wall Box Enclosures',
+      'Arc fault protection from fires',
+      'Protection for existing wiring and devices',
       'Dedicated Arena Lighting & Water Pump Circuits',
-      'ESA Commercial Code Audit & Clearance Certificate'
+      'ESA Certificate of Acceptance'
     ]
   },
   {
