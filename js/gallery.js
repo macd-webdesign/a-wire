@@ -63,9 +63,9 @@ const galleryProjects = [
     category: 'lighting',
     categoryName: 'Lighting Design',
     image: 'assets/gallery/livingroom_potlights_chandelier.jpg',
-    description: 'Open-concept main floor living space lighting design with 10 recessed LED potlights surrounding a central feature geometric wood open frame dining chandelier.',
+    description: 'Open-concept main floor living space lighting design with 6 recessed LED potlights surrounding a central feature geometric wood open frame dining chandelier.',
     specs: [
-      '10 Perimeter Recessed 4-Inch LED Potlights',
+      '6 Perimeter Recessed 4-Inch LED Potlights',
       'Central Feature Chandelier Junction Box Feed',
       'Dual-Zone Wall Dimmer Controls',
       'Seamless Clean Ceiling Finish & Concealed Wiring'
