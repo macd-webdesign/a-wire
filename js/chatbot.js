@@ -5,6 +5,7 @@ const chatbotKnowledge = {
   license: 'ECRA/ESA# 7016330',
   phone: '905 955-5455',
   email: 'awire.ec@gmail.com',
+  instagram: 'https://www.instagram.com/awire.ec/',
   tagline: 'POWERING YOUR HOME. ENERGIZING YOUR BUSINESS.',
   serviceAreas: ['Mississauga', 'Oakville', 'Brampton', 'Milton', 'Vaughan', 'Etobicoke', 'Toronto', 'GTA'],
   hours: {
@@ -222,12 +223,12 @@ function initChatbotUI() {
       return `📍 <strong>Service Areas Covered</strong><br><br>We serve the entire Greater Toronto Area (GTA), including:<br>• Mississauga<br>• Oakville<br>• Brampton<br>• Milton<br>• Vaughan & Etobicoke<br>• Toronto`;
     }
 
-    // 10. Hours & Phone / Email Intent
-    if (q.includes('hour') || q.includes('phone') || q.includes('number') || q.includes('contact') || q.includes('email') || q.includes('open') || q.includes('weekend') || q.includes('sunday')) {
-      return `📞 <strong>Contact & Operating Hours</strong><br><br>• Emergency Dispatch: <strong>24 Hours / 7 Days a Week</strong><br>• Standard Hours: Mon – Sat: 7:00 AM – 7:00 PM<br>• Phone: <strong><a href="tel:9059555455" style="color:var(--primary-gold);">905 955-5455</a></strong><br>• Email: <strong>awire.ec@gmail.com</strong>`;
+    // 10. Hours & Phone / Email / Instagram Intent
+    if (q.includes('hour') || q.includes('phone') || q.includes('number') || q.includes('contact') || q.includes('email') || q.includes('instagram') || q.includes('social') || q.includes('open') || q.includes('weekend') || q.includes('sunday')) {
+      return `📞 <strong>Contact & Operating Hours</strong><br><br>• Emergency Dispatch: <strong>24 Hours / 7 Days a Week</strong><br>• Standard Hours: Mon – Sat: 7:00 AM – 7:00 PM<br>• Phone: <strong><a href="tel:9059555455" style="color:var(--primary-gold);">905 955-5455</a></strong><br>• Email: <strong>awire.ec@gmail.com</strong><br>• Instagram: <strong><a href="https://www.instagram.com/awire.ec/" target="_blank" rel="noopener" style="color:var(--primary-gold);">📸 @awire.ec</a></strong>`;
     }
 
     // Fallback General Response
-    return `⚡ <strong>A-Wire Electrical Contracting Inc.</strong><br><br>We specialize in 200A panel upgrades, emergency power & backup generators (Authorized Generlink installer), Level 2 EV chargers, potlights, and commercial buildouts.<br><br>How can we assist you today?<br>• Phone: <strong><a href="tel:9059555455" style="color:var(--primary-gold);">905 955-5455</a></strong><br>• <a href="quote.html" style="color:var(--primary-gold);">Request a Free Quote Online &gt;</a>`;
+    return `⚡ <strong>A-Wire Electrical Contracting Inc.</strong><br><br>We specialize in 200A panel upgrades, emergency power & backup generators (Authorized Generlink installer), Level 2 EV chargers, potlights, and commercial buildouts.<br><br>How can we assist you today?<br>• Phone: <strong><a href="tel:9059555455" style="color:var(--primary-gold);">905 955-5455</a></strong><br>• Instagram: <strong><a href="https://www.instagram.com/awire.ec/" target="_blank" rel="noopener" style="color:var(--primary-gold);">📸 @awire.ec</a></strong><br>• <a href="quote.html" style="color:var(--primary-gold);">Request a Free Quote Online &gt;</a>`;
   }
 }
